@@ -78,19 +78,19 @@
 10
 11
 12
-13</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#!/usr/bin/Rscript</span>
+13</pre></div></td><td class="code"><div class="highlight"><pre>#!/usr/bin/Rscript
 
-<span class="n">options</span><span class="p">(</span><span class="s">&quot;repos&quot;</span><span class="o">=</span><span class="s">&quot;http://cran.stat.ucla.edu/&quot;</span><span class="p">)</span>
-<span class="n">library</span><span class="p">(</span><span class="n">utils</span><span class="p">)</span>
-<span class="n">update</span><span class="p">.</span><span class="n">packages</span><span class="p">(</span><span class="n">ask</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
-<span class="n">my</span><span class="p">.</span><span class="n">packages</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s">&quot;CvM2SL2Test&quot;</span><span class="p">,</span> <span class="s">&quot;MASS&quot;</span><span class="p">,</span> <span class="s">&quot;verification&quot;</span><span class="p">,</span> <span class="s">&quot;gtools&quot;</span><span class="p">,</span> <span class="s">&quot;ROCR&quot;</span><span class="p">,</span>
-        <span class="s">&quot;RColorBrewer&quot;</span><span class="p">,</span> <span class="s">&quot;heatmap.plus&quot;</span><span class="p">,</span> <span class="s">&quot;gmodels&quot;</span><span class="p">,</span> <span class="s">&quot;gplots&quot;</span><span class="p">,</span>
-        <span class="s">&quot;profr&quot;</span><span class="p">,</span> <span class="s">&quot;proftools&quot;</span><span class="p">,</span>
-        <span class="s">&quot;colorRamps&quot;</span><span class="p">)</span>
-<span class="n">to</span><span class="p">.</span><span class="n">download</span> <span class="o">=</span> <span class="n">which</span><span class="p">(</span><span class="o">!</span><span class="n">my</span><span class="p">.</span><span class="n">packages</span> <span class="o">%</span><span class="n">in</span><span class="o">%</span> <span class="n">rownames</span><span class="p">(</span><span class="n">installed</span><span class="p">.</span><span class="n">packages</span><span class="p">()))</span>
-<span class="k">if</span><span class="p">(</span> <span class="n">length</span><span class="p">(</span><span class="n">to</span><span class="p">.</span><span class="n">download</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
-    <span class="n">install</span><span class="p">.</span><span class="n">packages</span><span class="p">(</span><span class="n">my</span><span class="p">.</span><span class="n">packages</span><span class="p">[</span><span class="n">to</span><span class="p">.</span><span class="n">download</span><span class="p">],</span> <span class="n">clean</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
-<span class="p">}</span>
+options(&quot;repos&quot;=&quot;http://cran.stat.ucla.edu/&quot;)
+library(utils)
+update.packages(ask = FALSE)
+my.packages = c(&quot;CvM2SL2Test&quot;, &quot;MASS&quot;, &quot;verification&quot;, &quot;gtools&quot;, &quot;ROCR&quot;,
+        &quot;RColorBrewer&quot;, &quot;heatmap.plus&quot;, &quot;gmodels&quot;, &quot;gplots&quot;,
+        &quot;profr&quot;, &quot;proftools&quot;,
+        &quot;colorRamps&quot;)
+to.download = which(!my.packages %in% rownames(installed.packages()))
+if( length(to.download) &gt; 0){
+    install.packages(my.packages[to.download], clean=TRUE, dependencies=TRUE)
+}
 </pre></div>
 </td></tr></table>
 

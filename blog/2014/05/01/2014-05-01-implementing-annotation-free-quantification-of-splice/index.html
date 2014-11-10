@@ -77,17 +77,17 @@
 <p>Sigh.</p>
 <p>So I&#8217;d much rather use something that quantifies splicing of all junctions, arbitrarily. But when I tried using <code>sjcount</code> I couldn&#8217;t figure out what one of the outputs was (like what&#8217;s the difference between a &#8220;splice junction&#8221; and a &#8220;splice boundary?&#8221;). Plus I realized that the &#8220;splice junction counts&#8221; (<code>*.ssj</code>) file was really similar to the &#8220;<code>SJ.out.tab</code>&#8221; file created by the <a href="https://code.google.com/p/rna-star/"><span class="caps">RNA</span>-<span class="caps">STAR</span></a>&nbsp;aligner.</p>
 <p><code>.ssj</code> files look like (I added the column&nbsp;names):</p>
-<div class="highlight"><pre><span class="n">chrom</span>   <span class="n">start</span>   <span class="n">stop</span>    <span class="n">strand</span>  <span class="n">overhang</span>    <span class="n">count</span>
-<span class="n">chr1</span>    <span class="mi">146509</span>  <span class="mi">155767</span>  <span class="p">.</span>       <span class="mi">20</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">146509</span>  <span class="mi">155767</span>  <span class="p">.</span>       <span class="mi">34</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">146509</span>  <span class="mi">155767</span>  <span class="p">.</span>       <span class="mi">49</span>      <span class="mi">3</span>
-<span class="n">chr1</span>    <span class="mi">168165</span>  <span class="mi">169049</span>  <span class="p">.</span>       <span class="mi">10</span>      <span class="mi">2</span>
-<span class="n">chr1</span>    <span class="mi">168165</span>  <span class="mi">169049</span>  <span class="p">.</span>       <span class="mi">49</span>      <span class="mi">3</span>
-<span class="n">chr1</span>    <span class="mi">694503</span>  <span class="mi">700103</span>  <span class="p">.</span>       <span class="mi">29</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">694503</span>  <span class="mi">700103</span>  <span class="p">.</span>       <span class="mi">41</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">694503</span>  <span class="mi">700103</span>  <span class="p">.</span>       <span class="mi">49</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">7</span>       <span class="mi">2</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">9</span>       <span class="mi">5</span>
+<div class="highlight"><pre>chrom   start   stop    strand  overhang    count
+chr1    146509  155767  .       20      1
+chr1    146509  155767  .       34      1
+chr1    146509  155767  .       49      3
+chr1    168165  169049  .       10      2
+chr1    168165  169049  .       49      3
+chr1    694503  700103  .       29      1
+chr1    694503  700103  .       41      1
+chr1    694503  700103  .       49      1
+chr1    894461  894595  .       7       2
+chr1    894461  894595  .       9       5
 </pre></div>
 
 
@@ -97,33 +97,33 @@
 
 <p>The start/stop are off by one here because <code>.ssj</code><span class="quo">&#8216;</span>s index is from the exon end/exon start, and this is from the intron start/intron end. So the <span class="caps">SJ</span>.out.tab coordinates are (start from <code>.ssj</code>+1) and (end from <code>.ssj</code>-1).</p>
 <p><span class="caps">FYI</span>, the <code>.ssc</code> files looked&nbsp;like:</p>
-<div class="highlight"><pre><span class="n">chr1</span>    <span class="mi">894595</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">8</span>       <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">1228468</span> <span class="mi">1228468</span> <span class="p">.</span>       <span class="mi">1</span>       <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">1228468</span> <span class="mi">1228468</span> <span class="p">.</span>       <span class="mi">3</span>       <span class="mi">3</span>
-<span class="n">chr1</span>    <span class="mi">1228468</span> <span class="mi">1228468</span> <span class="p">.</span>       <span class="mi">5</span>       <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">1228468</span> <span class="mi">1228468</span> <span class="p">.</span>       <span class="mi">6</span>       <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">1228468</span> <span class="mi">1228468</span> <span class="p">.</span>       <span class="mi">7</span>       <span class="mi">2</span>
-<span class="n">chr1</span>    <span class="mi">1228468</span> <span class="mi">1228468</span> <span class="p">.</span>       <span class="mi">12</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">1228468</span> <span class="mi">1228468</span> <span class="p">.</span>       <span class="mi">13</span>      <span class="mi">2</span>
-<span class="n">chr1</span>    <span class="mi">1228468</span> <span class="mi">1228468</span> <span class="p">.</span>       <span class="mi">16</span>      <span class="mi">2</span>
-<span class="n">chr1</span>    <span class="mi">1228468</span> <span class="mi">1228468</span> <span class="p">.</span>       <span class="mi">27</span>      <span class="mi">1</span>
+<div class="highlight"><pre>chr1    894595  894595  .       8       1
+chr1    1228468 1228468 .       1       1
+chr1    1228468 1228468 .       3       3
+chr1    1228468 1228468 .       5       1
+chr1    1228468 1228468 .       6       1
+chr1    1228468 1228468 .       7       2
+chr1    1228468 1228468 .       12      1
+chr1    1228468 1228468 .       13      2
+chr1    1228468 1228468 .       16      2
+chr1    1228468 1228468 .       27      1
 </pre></div>
 
 
 <p>This claims to have the same columns as <code>.ssj</code> files except instead of start/stop it&#8217;s position/position. I was very confused by how you can have a count at a position. Why does <code>chr1:894595</code> have one line while <code>chr1:1228468</code> have a bunch? If you search for <code>894595</code> in the <code>.ssj</code> file, you&nbsp;get:</p>
-<div class="highlight"><pre><span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">7</span>       <span class="mi">2</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">9</span>       <span class="mi">5</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">10</span>      <span class="mi">2</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">11</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">12</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">14</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">16</span>      <span class="mi">2</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">19</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">20</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">21</span>      <span class="mi">13</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">22</span>      <span class="mi">1</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">42</span>      <span class="mi">2</span>
-<span class="n">chr1</span>    <span class="mi">894461</span>  <span class="mi">894595</span>  <span class="p">.</span>       <span class="mi">49</span>      <span class="mi">14</span>
+<div class="highlight"><pre>chr1    894461  894595  .       7       2
+chr1    894461  894595  .       9       5
+chr1    894461  894595  .       10      2
+chr1    894461  894595  .       11      1
+chr1    894461  894595  .       12      1
+chr1    894461  894595  .       14      1
+chr1    894461  894595  .       16      2
+chr1    894461  894595  .       19      1
+chr1    894461  894595  .       20      1
+chr1    894461  894595  .       21      13
+chr1    894461  894595  .       22      1
+chr1    894461  894595  .       42      2
+chr1    894461  894595  .       49      14
 </pre></div>
 
 
@@ -134,8 +134,8 @@
 <p><img alt="" src="http://bioinformatics.oxfordjournals.org/content/29/2/273/embed/graphic-3.gif" /></p>
 <p>Where the summation is over all other possible acceptors (in the case of <em>A&#8217;</em>) or all other possible donors (in the case of <em>D&#8217;</em>).</p>
 <p>So using the <span class="caps">SJ</span>.out.tab files from <span class="caps">RNA</span>-<span class="caps">STAR</span> and the magic of <a href="http://pandas.pydata.org/"><code>pandas</code></a>, and a <a href="https://github.com/olgabot/sj2psi/blob/master/sj2psi/__init__.py#L64">bit of filtering</a>, you can calculate these scores very&nbsp;easily:</p>
-<div class="highlight"><pre><span class="n">sj</span><span class="p">[</span><span class="err">&#39;</span><span class="n">psi5</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sj</span><span class="p">.</span><span class="n">groupby</span><span class="p">([</span><span class="err">&#39;</span><span class="n">chrom</span><span class="err">&#39;</span><span class="p">,</span> 
-    <span class="err">&#39;</span><span class="n">first_bp_intron</span><span class="err">&#39;</span><span class="p">])[</span><span class="err">&#39;</span><span class="n">total_filtered_reads</span><span class="err">&#39;</span><span class="p">].</span><span class="n">transform</span><span class="p">(</span><span class="n">lambda</span> <span class="n">x</span><span class="o">:</span> <span class="n">x</span><span class="o">/</span><span class="n">x</span><span class="p">.</span><span class="n">sum</span><span class="p">())</span>
+<div class="highlight"><pre>sj[&#39;psi5&#39;] = sj.groupby([&#39;chrom&#39;, 
+    &#39;first_bp_intron&#39;])[&#39;total_filtered_reads&#39;].transform(lambda x: x/x.sum())
 </pre></div>
 
 
