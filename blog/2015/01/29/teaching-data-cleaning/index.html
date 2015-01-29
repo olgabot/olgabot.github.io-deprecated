@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Science, meet productivity, A computational RNA biologist exploring productivity, python, and reproducibility.">
+
+
+        <title>Teaching “Data cleaning” // Science, meet productivity // A computational RNA biologist exploring productivity, python, and reproducibility.</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../../theme/css/pure.css">
+    <link rel="stylesheet" href="../../../../../theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('https://raw.githubusercontent.com/olgabot/olgabot.github.io-source/master/content/images/ordered_driftwood.jpg')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="http://raw.githubusercontent.com/olgabot/olgabot.github.io-source/master/content/images/olga_icon_square.jpg">
+                            <h1 class="brand-main"><a href="/">Science, meet productivity</a></h1>
+                            <p class="tagline">A computational RNA biologist exploring productivity, python, and reproducibility.</p>
+                                <p class="links"><a href="../../../../../archives.html">Archive</a></p>
+                                <p class="links"><a href="../../../../../pages/about.html">About</a></p>
+                                <p class="social">
+                                    <a href="http://github.com/olgabot">
+                                        <i class="fa fa-github-square fa-3x"></i>
+                                    </a>
+                                    <a href="http://twitter.com/olgabot">
+                                        <i class="fa fa-twitter-square fa-3x"></i>
+                                    </a>
+                                    <a href="http://www.linkedin.com/in/olgabotvinnik/">
+                                        <i class="fa fa-linkedin-square fa-3x"></i>
+                                    </a>
+                                <p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Teaching &#8220;Data&nbsp;cleaning&#8221;</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="../../../../../tag/teaching.html">teaching</a>
+                                <a class="post-category" href="../../../../../tag/python.html">python</a>
+                                <a class="post-category" href="../../../../../tag/programming.html">programming</a>
+                        </p>
+                </header>
+            </section>
+            <div class="highlight"><pre><span class="n">Today</span> <span class="n">I</span> <span class="n">taught</span> <span class="n">a</span> <span class="mi">1</span><span class="o">-</span><span class="n">hour</span> <span class="n">lesson</span> <span class="n">on</span> <span class="s">&quot;Cleaning data&quot;</span> <span class="k">for</span> <span class="n">students</span> <span class="k">in</span> <span class="n">UCSD</span><span class="err">&#39;</span><span class="n">s</span> <span class="nl">BIOM262</span><span class="p">:</span> <span class="n">Quantitative</span> <span class="n">Methods</span> <span class="k">in</span> <span class="n">Genetics</span> <span class="k">class</span><span class="p">.</span> <span class="n">Here</span> <span class="n">is</span> <span class="n">the</span> <span class="p">[</span><span class="n">IPython</span> <span class="n">notebook</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//nbviewer.ipython.org/gist/olgabot/edebccd736d051d8a1c7) that I used. While designing the lesson, I used concepts I learned from [Software Carpentry](http://software-carpentry.org/)&#39;s [Training for instrutors](http://teaching.software-carpentry.org/), such as:</span>
+
+<span class="o">*</span> <span class="n">Designing</span> <span class="n">the</span> <span class="n">lesson</span> <span class="n">incrementally</span><span class="p">,</span> <span class="n">so</span> <span class="n">every</span> <span class="n">step</span> <span class="n">builds</span> <span class="n">upon</span> <span class="n">itself</span>
+<span class="o">*</span> <span class="n">When</span> <span class="n">designing</span> <span class="n">a</span> <span class="n">lesson</span><span class="p">,</span> <span class="n">have</span> <span class="n">the</span> <span class="n">final</span> <span class="n">task</span> <span class="k">in</span> <span class="n">mind</span> <span class="n">and</span> <span class="n">teach</span> <span class="n">to</span> <span class="n">that</span>
+<span class="o">*</span> <span class="n">Being</span> <span class="n">as</span> <span class="n">clear</span> <span class="n">as</span> <span class="n">possible</span> <span class="k">for</span> <span class="n">each</span> <span class="n">step</span>
+
+<span class="n">During</span> <span class="n">the</span> <span class="n">workshop</span><span class="p">,</span> <span class="n">I</span> <span class="n">again</span> <span class="n">implemented</span> <span class="n">things</span> <span class="n">we</span> <span class="n">learned</span> <span class="k">in</span> <span class="n">software</span> <span class="n">carpentry</span><span class="p">,</span> <span class="n">such</span> <span class="n">as</span> <span class="n">working</span> <span class="k">in</span> <span class="n">pairs</span> <span class="n">and</span> <span class="n">using</span> <span class="n">stickie</span> <span class="n">notes</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">progress</span><span class="p">.</span> <span class="n">Overall</span><span class="p">,</span> <span class="n">I</span> <span class="n">thought</span> <span class="n">it</span> <span class="n">went</span> <span class="n">quite</span> <span class="n">well</span><span class="p">,</span> <span class="n">with</span> <span class="n">students</span> <span class="n">being</span> <span class="n">engaged</span> <span class="k">for</span> <span class="n">most</span> <span class="n">of</span> <span class="n">the</span> <span class="n">time</span><span class="p">.</span> <span class="n">Here</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">the</span> <span class="n">results</span> <span class="n">of</span> <span class="n">what</span> <span class="n">went</span> <span class="n">well</span> <span class="n">and</span> <span class="n">what</span> <span class="n">could</span> <span class="n">be</span> <span class="n">improved</span><span class="p">.</span>
+</pre></div>
+
+
+<p>Our compute cluster is down for maintenance, so obviously instead of working on my advancement exam presentation, I&#8217;m gonna write a blog&nbsp;post.</p>
+<p>Today I taught a 1-hour lesson on &#8220;Cleaning data&#8221; for students in <span class="caps">UCSD</span>&#8217;s <span class="caps">BIOM262</span>: Quantitative Methods in Genetics class. Here is the <a href="http://nbviewer.ipython.org/gist/olgabot/edebccd736d051d8a1c7">IPython notebook</a> that I used. While designing the lesson, I used concepts I learned from <a href="http://software-carpentry.org/">Software Carpentry</a>&#8216;s <a href="http://teaching.software-carpentry.org/">Training for instrutors</a>, such&nbsp;as:</p>
+<ul>
+<li>Designing the lesson incrementally, so every step builds upon&nbsp;itself</li>
+<li>When designing a lesson, have the final task in mind and teach to&nbsp;that</li>
+<li>Being as clear as possible for each&nbsp;step</li>
+</ul>
+<p>During the workshop, I again implemented things we learned in software carpentry, such as working in pairs and using stickie notes to indicate progress. Overall, I thought it went quite well, with students being engaged for most of the time. Here&#8217;s the results of what went well and what could be&nbsp;improved.</p>
+<h2>The&nbsp;Good</h2>
+<p>Here are some of the things I thought went&nbsp;well.</p>
+<p><strong>Everyone worked in pairs</strong>. Before we split into pairs, I surveyed the class to check for previous experience with <a href="http://www.python.org/">Python</a>, <a href="http://ipython.org/">IPython Notebook</a>, and <a href="http://pandas.pydata.org/">pandas</a>. Then, the person who has <strong>less</strong> experienc was the one who did all the typing (aka &#8220;driving&#8221; in pair-programming parlance), and the more experienced person wasn&#8217;t allowed to type. We did this at the software carpentry training while doing a Github](https://github.com/) exercise. I paired with someone who was less experience with Github, and it was a good experience for me to have to sit on my hands and talk through every step. This was very useful because the more experienced person had to be explicit and describe every step, and the less experienced person automatically had a mentor to ask &#8220;dumb&#8221; questions to, without having to grab an instructor. An additional benefit is that when working in pairs, you&#8217;re held more accountable, so you can&#8217;t just do some exercises and then switch to your email or facebook, because your partner is right&nbsp;there.</p>
+<p><strong>Used pink and blue stickies to show progress.</strong> Pink was &#8220;still working&#8221; and blue was &#8220;done.&#8221; This was helpful to be able to scan the room and get a sense of the progress. We used this at software carpentry as well, but it was definitely more helpful as an instructor than as a student, because you got an implicit sense of progress, without having to check in personally with&nbsp;everyone.</p>
+<p>Here&#8217;s what the students said they&nbsp;liked.</p>
+<ul>
+<li>In-class verbal feedback (everyone has to give one feedback, alternate good and bad, no repeats)<ul>
+<li>Working in&nbsp;pairs </li>
+<li>Hands-on&nbsp;activity</li>
+<li>Cleanly&nbsp;organized</li>
+<li>Could go at your own&nbsp;pace</li>
+<li>My partner was very&nbsp;helpful!</li>
+<li>Learned&nbsp;IPython</li>
+</ul>
+</li>
+<li>Anonymous written feedback. All of these are direct quotes.<ul>
+<li>Thorough</li>
+<li>Progressive - ideas built upon each other&nbsp;well</li>
+<li>Paired&nbsp;activity</li>
+<li>This was a great session - should have done this in the first week. Your tutorial was <span class="caps">EXCELLENT</span>. It would be nice to have this introduced earlier, in this manner. You&#8217;re a great instructor. Great job and thank&nbsp;you!</li>
+<li>Very nice. Work on IPython&nbsp;exercises.</li>
+<li>Very well put together exercise, referenceable for the&nbsp;future</li>
+<li>Very practical&nbsp;skills</li>
+<li>Step by step instructions with logic very&nbsp;helpful</li>
+<li><span class="dquo">&#8220;</span>Awesome worksheet, really well made. My favorite parts were the ones that made me think harder, so the worksheet could be even&nbsp;harder.&#8221;</li>
+<li>Good instructions on&nbsp;platform</li>
+<li>Easy to&nbsp;follow</li>
+<li>IPython&nbsp;format</li>
+<li>Thanks for your patience! I liked the tutorial a lot! Using IPython is fun&nbsp;:)</li>
+<li>The steps and instructions were clear and built on each other. I would be happy if all homework was set up in this&nbsp;way.</li>
+</ul>
+</li>
+</ul>
+<h2>The&nbsp;Bad</h2>
+<p>The instructions for getting set up with downloading an IPython notebook, and having to <code>cd</code> and navigate to that directory, and start up an IPython notebook were confusing and need to be rewritten or completely reworked. Maybe give them a <code>wget</code> or similar command? Then they&#8217;ll be directly in that folder where the <code>.ipynb</code> was downloaded to, and don&#8217;t have to do any navigation. This took up a good 15 minutes at the beginning, that could have been used on programming&nbsp;instead.</p>
+<p>Windows was a much larger impediment than I thought. The first part of the lesson was performing Unix commands such as <code>head</code>, <code>tail</code>, <code>wc</code>, and searching for a command to count the number of columns in a file (ends up being either <code>awk</code> or a combo of <code>head</code> and <code>wc</code>). I didn&#8217;t plan for this, or test the lesson on a Windows machine, but half the class was using Windows. So that&#8217;s definitely something I will plan for in the&nbsp;future.</p>
+<p>Here&#8217;s what the students said could be&nbsp;improved.</p>
+<ul>
+<li>In-class verbal feedback<ul>
+<li>Felt rushed for&nbsp;me</li>
+<li>Show the results on my computer, as well as hands&nbsp;on</li>
+<li>Hard to get started without the right&nbsp;programs</li>
+<li><strong>too much help</strong> in the instructions [This one took me off&nbsp;guard!]</li>
+<li>Windows&nbsp;:(</li>
+<li>No Memes&nbsp;:(</li>
+</ul>
+</li>
+<li>Anonymous written feedback<ul>
+<li>Bad. Windows machines.&nbsp;Bad</li>
+<li>Would be nice to work with genomics&nbsp;data</li>
+<li>It&#8217;s hard for me not to be the&nbsp;&#8220;driver&#8221;</li>
+<li>Umm, too much&nbsp;feedback?</li>
+<li>Hard to find equivalent commands for Windows on my own because I don&#8217;t know how to parse through other people&#8217;s tips and know which one will work or not. Not your fault&nbsp;though!</li>
+<li>There should be resources and instructinos on how to make this applicable to our own&nbsp;work</li>
+</ul>
+</li>
+</ul>
+<h2>The&nbsp;Ugly</h2>
+<p>Windows&nbsp;:(</p>
+            <a href="#" class="go-top">Go Top</a>
+    <div class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "sciencemeetproductivity"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+<footer class="footer">
+    <p>&copy; Olga Botvinnik &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-53680167-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+
+</body>
+</html>
