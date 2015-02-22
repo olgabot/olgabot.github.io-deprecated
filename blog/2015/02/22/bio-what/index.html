@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Science, meet productivity, A computational RNA biologist exploring productivity, python, and reproducibility.">
+
+        <link rel="alternate"  href="/feeds/all.atom.rss.xml" type="application/atom+xml" title="Science, meet productivity Full Atom Feed"/>
+        <link rel="alternate" href="/feeds/all.rss.xml" type="application/rss+xml" title="Science, meet productivity Full RSS Feed"/>
+
+        <title>Bio-what? // Science, meet productivity // A computational RNA biologist exploring productivity, python, and reproducibility.</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../../theme/css/pure.css">
+    <link rel="stylesheet" href="../../../../../theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('https://raw.githubusercontent.com/olgabot/olgabot.github.io-source/master/content/images/ordered_driftwood.jpg')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="http://raw.githubusercontent.com/olgabot/olgabot.github.io-source/master/content/images/olga_icon_square.jpg">
+                            <h1 class="brand-main"><a href="/">Science, meet productivity</a></h1>
+                            <p class="tagline">A computational RNA biologist exploring productivity, python, and reproducibility.</p>
+                                <p class="links"><a href="../../../../../archives.html">Archive</a></p>
+                                <p class="links"><a href="../../../../../pages/about.html">About</a></p>
+                                <p class="social">
+                                    <a href="http://github.com/olgabot">
+                                        <i class="fa fa-github-square fa-3x"></i>
+                                    </a>
+                                    <a href="http://twitter.com/olgabot">
+                                        <i class="fa fa-twitter-square fa-3x"></i>
+                                    </a>
+                                    <a href="http://www.linkedin.com/in/olgabotvinnik/">
+                                        <i class="fa fa-linkedin-square fa-3x"></i>
+                                    </a>
+                                <p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>Bio-what?</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="../../../../../tag/science.html">science</a>
+                                <a class="post-category" href="../../../../../tag/bioinformatics.html">bioinformatics</a>
+                        </p>
+                </header>
+            </section>
+            <p>When I tell people I do &#8220;bioinformatics,&#8221; the response is usually &#8220;bio-<em>what</em>?&#8221; And honestly, bioinformatics is hard to define even for people <span class="caps">WITHIN</span> the field. In this post I will describe what I see as the two main threads of&nbsp;bioinformatics.</p>
+<p>First of all, there&#8217;s the issue of naming. To some people, &#8220;Computational Biology&#8221; is separate from &#8220;Bioinformatics,&#8221; but two people rarely agree on exactly what constitutes one or the other. Secondly, our PhD program is named <em>&#8220;Bioinformatics and Systems Biology&#8221;</em>, and according to my friend on the systems biology side who worked in a Harvard lab during undergrad before coming to <span class="caps">UC</span>-San Diego, there&#8217;s a huge difference between &#8220;East Coast Systems Biology&#8221; and &#8220;West Coast Systems Biology,&#8221; even though I can&#8217;t&nbsp;tell.</p>
+<p>Secondly, there&#8217;s a huge range of topics that consist of bioinformatics in one way or another. The way I see it, there&#8217;s two main divisions: <em>&#8220;Classic Bioinformatics&#8221;</em> and <em>&#8220;Applied Bioinformatics.&#8221;</em> These should be taken with a heavy grain of salt, as I am a newcomer to the Bioinformatics field. These are my opinions on the current state, not absolute truth. Additionally, these two &#8220;halves&#8221; are symbiotic, and need each other to sustain&nbsp;life.</p>
+<h2>Classic&nbsp;Bioinformatics</h2>
+<p>This is where it all started. It used to be that when people thought of bioinformatics, they thought of comparing sequences. A few years ago I read a blog post that stated &#8220;All of bioinformatics is essentially <code>strcmp</code> [string compare],&#8221; which made my blood boil because the subtleties of comparing these strings requires sophisticated algorithms to account for gaps, substitutions, and repetitive regions. Most of the tools below are analyzing strings&nbsp;or </p>
+<p>The focus here is to make sense and organize what we have of biological data into organized data&nbsp;structures.</p>
+<p>These are the algorithms and tools that we learn in our first-year graduate school classes,&nbsp;like:</p>
+<ul>
+<li><a href="http://www.pnas.org/content/98/17/9748.full">De Bruijn graphs for genome&nbsp;assembly</a></li>
+<li><a href="http://dl.acm.org/citation.cfm?id=586673">Genome rearrangements and sorting by&nbsp;reversals</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm">Smith-Waterman local alignment of&nbsp;sequences</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm">Needleman-Wunsch global alignment of&nbsp;sequences</a></li>
+<li><a href="http://genomebiology.com/2009/10/3/R25">Burrows-Wheeler transform for aligning reads to the&nbsp;genome</a></li>
+<li><a href="http://genes.mit.edu/burgelab/maxent/Xmaxentscan_scoreseq.html">Maximum Entropy determination of splice site&nbsp;strengths</a></li>
+<li><a href="https://github.com/ged-lab/khmer"><em>k</em>-mer counting and&nbsp;filtering</a></li>
+<li><a href="http://www.nature.com/nbt/journal/v22/n10/pdf/nbt1004-1315.pdf">Hidden Markov Models for genome and protein structure and domain&nbsp;prediction</a></li>
+<li><a href="http://www.psrg.csail.mit.edu/pubs/BarGifJaa-ismb01.pdf">Optimal leaf ordering for hierarchical&nbsp;clustering</a></li>
+<li><a href="http://www.nature.com/nature/journal/v415/n6868/full/415180a.html">Mass spectrometry for&nbsp;proteomics</a></li>
+<li><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3398611/">Cyclic peptide sequencing by mass&nbsp;spectrometry</a></li>
+</ul>
+<p>I see this as <em>Computer science applied to&nbsp;biology.</em></p>
+<h2>Applied&nbsp;Bioinformatics</h2>
+<p>This is where we are now. This is closer to what I do on a daily basis. Honestly, I don&#8217;t build any of the algorithms above, but I do need to understand them to know where my data is coming&nbsp;from.</p>
+<p>Honestly, the skills I learned in my classes was a good basis for the broad field of biology, but I barely use them on a day-to-day basis. Mostly&nbsp;I </p>
+<p>The focus here is to attribute <em>biological function</em> to&nbsp;data.</p>
+<ul>
+<li><a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0030129">Bayesian network&nbsp;inference</a></li>
+<li><a href="">Network&nbsp;flow</a></li>
+<li><a href=""></a></li>
+</ul>
+<p>I see this as <em>Data science applied to biology.</em> These require the output of the <em>&#8220;Classic Bioinformatics&#8221;</em> tools, and use statistics, machine learning, and other applied tools to extract&nbsp;information.</p>
+<h2>Classic vs Applied and Awards by the <span class="caps">ISCB</span></h2>
+<p>What&#8217;s interesting is that this division is especially evident in the awardees of the <a href="http://www.iscb.org/">International Society of Computational Biology</a> (<span class="caps">ISCB</span>), where the Overton awards to early-career scientists tend to be more &#8220;Applied,&#8221; and the Senior Scientist tend to be more&nbsp;&#8220;Classic.&#8221;</p>
+<p>As I am human, I certainly may have missed a paper or two that pushed one person into one of the other categories, and I am happy to correct any&nbsp;errors.</p>
+<h3>Overton Award&nbsp;(Early-career)</h3>
+<ul>
+<li>[2015: Applied] <a href="http://www.iscb.org/iscb-awards/2383">Curtis Huttenhower</a><ul>
+<li>[Applied] Justification: <a href="http://www.ncbi.nlm.nih.gov/pubmed/19246570?dopt=Abstract">Functional maps of the human genome</a> Analysis of large-scale microbiome&nbsp;datasets</li>
+</ul>
+</li>
+<li>[2014] <a href="http://www.iscb.org/iscb-awards/2225">Dana Pe&#8217;er</a><ul>
+<li>[Applied] Justification: <a href="http://bioinformatics.oxfordjournals.org/content/17/suppl_1/S215.full.pdf">Inferring subnetworks from perturbed expression profiles using Bayesian&nbsp;Networks</a></li>
+</ul>
+</li>
+<li>[2013] <a href="http://www.iscb.org/iscb-awards/1837">Goncalo Abecasis</a><ul>
+<li>[Classic] Justification: <a href="http://www.sciencedirect.com/science/article/pii/S0002929707622538">Quantitative Test Loci in nuclear families</a>, <a href="http://www.nature.com/ng/journal/v30/n1/full/ng786.html">Gene flow trees</a>, <a href="http://bioinformatics.oxfordjournals.org/content/25/16/2078.short">Sequence Alignment Map (<span class="caps">SAM</span>)&nbsp;format</a></li>
+</ul>
+</li>
+<li>[2012] <a href="http://www.iscb.org/iscb-awards/1224">Ziv Bar-Joseph</a><ul>
+<li>[Classic] Justification: <a href="http://www.psrg.csail.mit.edu/pubs/BarGifJaa-ismb01.pdf">Optimal Leaf Ordering</a>, <a href="http://www.sciencemag.org/content/331/6014/183">Maximal Independent Sets in <em>Drosophila</em>&nbsp;development</a></li>
+</ul>
+</li>
+<li>[2011] <a href="http://www.iscb.org/iscb-awards/1117">Olga Troyanskaya</a><ul>
+<li>[Applied] Justification: <a href="http://bioinformatics.oxfordjournals.org/content/17/6/520.full.pdf">Missing value imputation for microarrays</a>, <a href="http://www.pnas.org/content/100/14/8348.long">A Bayesian framework for combining heterogeneous data sources for gene function prediction (in Saccharomyces&nbsp;cerevisiae)</a></li>
+</ul>
+</li>
+<li>[2010] <a href="">Steven E.&nbsp;Brenner</a></li>
+<li>[2009] <a href="">Trey&nbsp;Ideker</a></li>
+<li>[2008] <a href="">Aviv&nbsp;Regev</a></li>
+<li>[2007] <a href="">Eran&nbsp;Segal</a></li>
+<li>[2006] <a href="">Mathieu&nbsp;Blanchette</a></li>
+<li>[2005] <a href="">Ewan&nbsp;Birney</a></li>
+<li>[2004] <a href="">Uri&nbsp;Alon</a></li>
+<li>[2003] <a href="">Jim&nbsp;Kent</a></li>
+<li>[2002] <a href="">David&nbsp;Baker</a></li>
+<li>[2001] <a href="">Christopher B.&nbsp;Burge</a></li>
+</ul>
+<h3>Senior Scientist Accomplishment&nbsp;Prize</h3>
+<ul>
+<li>[2015] <a href="">Cyrus&nbsp;Chothia</a></li>
+<li>[2014] <a href="http://www.iscb.org/iscb-awards/2224">Gene Myers</a><ul>
+<li>[Classic] Justification: <a href="http://www.ncbi.nlm.nih.gov/pubmed/2231712?dopt=Citation"><span class="caps">BLAST</span> aka Basic Local Alignment Search&nbsp;Tool</a></li>
+</ul>
+</li>
+<li>[2013] <a href="">David&nbsp;Eisenberg</a></li>
+<li>[2012] <a href="">Gunnar von&nbsp;Heijne</a></li>
+<li>[2011] <a href="">Michael&nbsp;Ashburner</a></li>
+<li>[2010] <a href="">Chris&nbsp;Sander</a></li>
+<li>[2009] <a href="">Webb&nbsp;Miller</a></li>
+<li>[2008] <a href="">David&nbsp;Haussler</a></li>
+<li>[2007] <a href="">Temple&nbsp;Smith</a></li>
+<li>[2006] <a href="">Michael&nbsp;Waterman</a></li>
+<li>[2005] <a href="">Janet&nbsp;Thornton</a></li>
+<li>[2004] <a href="">David&nbsp;Lipman</a></li>
+<li>[2003] <a href="">David&nbsp;Sankoff </a></li>
+</ul>
+            <a href="#" class="go-top">Go Top</a>
+    <div class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "sciencemeetproductivity"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+<footer class="footer">
+    <p>&copy; Olga Botvinnik &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-53680167-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+
+</body>
+</html>
