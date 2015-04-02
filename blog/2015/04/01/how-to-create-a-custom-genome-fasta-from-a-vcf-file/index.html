@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Science, meet productivity, A computational RNA biologist exploring productivity, python, and reproducibility.">
+
+        <link rel="alternate"  href="/feeds/all.atom.rss.xml" type="application/atom+xml" title="Science, meet productivity Full Atom Feed"/>
+        <link rel="alternate" href="/feeds/all.rss.xml" type="application/rss+xml" title="Science, meet productivity Full RSS Feed"/>
+
+        <title>How to create a custom genome fasta from a vcf file // Science, meet productivity // A computational RNA biologist exploring productivity, python, and reproducibility.</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../../../theme/css/pure.css">
+    <link rel="stylesheet" href="../../../../../theme/css/pygments.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="pure-g-r" id="layout">
+        <div class="sidebar pure-u">
+            <div class="cover-img" style="background-image: url('https://raw.githubusercontent.com/olgabot/olgabot.github.io-source/master/content/images/ordered_driftwood.jpg')">
+                <div class="cover-body">
+                    <header class="header">
+                        <hgroup>
+                            <img class="avatar" src="http://raw.githubusercontent.com/olgabot/olgabot.github.io-source/master/content/images/olga_icon_square.jpg">
+                            <h1 class="brand-main"><a href="/">Science, meet productivity</a></h1>
+                            <p class="tagline">A computational RNA biologist exploring productivity, python, and reproducibility.</p>
+                                <p class="links"><a href="../../../../../archives.html">Archive</a></p>
+                                <p class="links"><a href="../../../../../pages/about.html">About</a></p>
+                                <p class="social">
+                                    <a href="http://github.com/olgabot">
+                                        <i class="fa fa-github-square fa-3x"></i>
+                                    </a>
+                                    <a href="http://twitter.com/olgabot">
+                                        <i class="fa fa-twitter-square fa-3x"></i>
+                                    </a>
+                                    <a href="http://www.linkedin.com/in/olgabotvinnik/">
+                                        <i class="fa fa-linkedin-square fa-3x"></i>
+                                    </a>
+                                <p>
+                        </hgroup>
+                    </header>
+                </div>
+            </div>
+        </div>
+    <div class="pure-u">
+        <div class="content">
+            <section class="post">
+                <header class="post-header">
+                    <h1>How to create a custom genome fasta from a vcf&nbsp;file</h1>
+                        <p class="post-meta">
+                            // under                                 <a class="post-category" href="../../../../../tag/bioinformatics.html">bioinformatics</a>
+                                <a class="post-category" href="../../../../../tag/genomics.html">genomics</a>
+                                <a class="post-category" href="../../../../../tag/ensembl.html">ensembl</a>
+                        </p>
+                </header>
+            </section>
+            <p>I&#8217;ve tried to create a custom genome for the J. Craig Venter genome several times using <code>vcf-consensus</code> and other tools and they have never worked. Finally, I&#8217;ve gotten something to work, and hopefuly this helps you too! This is a log of all the steps I had to take to create a new reference genome. This requires a few&nbsp;tools:</p>
+<ol>
+<li><a href="http://samtools.sourceforge.net/">samtools</a></li>
+<li><a href="http://vcftools.sourceforge.net/index.html">vcftools</a></li>
+<li><a href="http://broadinstitute.github.io/picard/">PicardTools</a></li>
+<li><a href="https://www.broadinstitute.org/gatk/"><span class="caps">GATK</span></a></li>
+</ol>
+<p>Lucky for me, I already all of these tools installed on our server, but this may not be the case for you. I&#8217;m not the expert on installing these things, for the most part they were installed by other lab members. If you need help with these tools, I suggest searching on <a href="https://www.biostars.org/">biostars.org</a> and <a href="http://seqanswers.com/">seqanswers.com</a> for&nbsp;advice.</p>
+<p>Let&#8217;s get started. The goal is to be able to run <a href="https://www.broadinstitute.org/gatk/gatkdocs/org_broadinstitute_gatk_tools_walkers_fasta_FastaAlternateReferenceMaker.php"><code>FastaAlternativeReferenceMaker</code></a> from <span class="caps">GATK</span>, which&nbsp;requires:</p>
+<ol>
+<li>Properly prepared reference fasta (we&#8217;ll see what <em>&#8220;properly prepared&#8221;</em> means in a&nbsp;bit)</li>
+<li>Karyotypically sorted &#8220;variant call format&#8221; (<code>vcf</code>) file for the new&nbsp;genome.</li>
+</ol>
+<p>First, we need to obtain and decompress human genome assembly. I like to keep my directories organized like the original source, so we&#8217;ll move to the <code>/projects/ps-yeolab/genomes/ensembl/v75/fasta/homo_sapiens/dna/</code> first. Notice we do this for-loop, that&#8217;s because <span class="caps">GATK</span> is extremely strict and requires your reference genome to be in karyotypic order (e.g. <code>1, 2, 3, ...</code>) not lexicographical order (e.g. <code>1, 10, 11, 12, ...</code>), and in the exact same order as the <span class="caps">VCF</span>, which is sorted in this way. Also, we want to make sure not to download any of the haplotypes or unassembled contigs, e.g. <code>GL000246.1</code>. Also, notice that the chromosomes are numbered <span class="caps">ENSEMBL</span>-style, as <code>1</code>, <code>2</code>, <code>3</code>&#8230; rather than <span class="caps">UCSC</span>-style with <code>chr</code> prepended, as <code>chr1</code>, <code>chr2</code>, <code>chr3</code>, &#8230; Just something to keep in mind in case you need to do this for other genomes, there could be other&nbsp;caveats.</p>
+<div class="highlight"><pre>cd /projects/ps-yeolab/genomes/ensembl/v75/fasta/homo_sapiens/dna/
+for C in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 MT X Y
+do
+    curl &quot;ftp://ftp.ensembl.org/pub/release-75/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.75.dna.chromosome.<span class="cp">${</span><span class="n">C</span><span class="cp">}</span>.fa.gz&quot; |\
+        gunzip -c &gt;&gt; Homo_sapiens.GRCh37.75.fa
+done
+</pre></div>
+
+
+<p>Next, obtain and decompress Venter vcf file. Again, we&#8217;ll do this in the corresponding directory on our server, which matches the folder layout of the <span class="caps">ENSEMBL</span> ftp&nbsp;site.</p>
+<div class="highlight"><pre>cd /projects/ps-yeolab/genomes/ensembl/v75/variation/vcf/homo_sapiens/
+wget ftp://ftp.ensembl.org/pub/release-75/variation/vcf/homo_sapiens/Venter.vcf.gz
+gunzip Venter.vcf.gz
+</pre></div>
+
+
+<p>This <span class="caps">VCF</span> file is in lexicographically sorted order, so we will use <a href="http://vcftools.sourceforge.net/perl_module.html#vcf-sort"><code>vcf-sort</code></a> from <code>vcftools</code> to sort the genome karyotypically, aka in chromosomal&nbsp;order.</p>
+<div class="highlight"><pre>cat Venter.vcf | vcf-sort --chromosomal-order &gt; Venter.sorted.vcf
+</pre></div>
+
+
+<p>Now we need to follow the instructions provided on the <a href="http://gatkforums.broadinstitute.org/discussion/1601/how-can-i-prepare-a-fasta-file-to-use-as-reference"><span class="caps">GATK</span> forums</a> about how to prepare a fasta file as a&nbsp;reference.</p>
+<p>Now that we have a properly ordered genome, we will build an index of it using <a href="http://samtools.sourceforge.net/"><code>samtools</code></a>. I&#8217;m specifying a specific <code>samtools</code>, because the bleeding edge version doesn&#8217;t work on our server and we have to use version <code>0.1.19</code>.</p>
+<div class="highlight"><pre>/projects/ps-yeolab/software/samtools-0.1.19_built_by_hand/samtools faidx Homo_sapiens.GRCh37.75.fa
+</pre></div>
+
+
+<p>Create a sequence dictionary of the genome using <a href="http://broadinstitute.github.io/picard/">PicardTools</a>. Our <code>PicardTools</code> are located in <code>/projects/ps-yeolab/software/picard-tools-1.93/</code>, yours are probably somewhere else. I&#8217;m using the full path to be illustrative of the many components of bioinformatics&nbsp;:)</p>
+<div class="highlight"><pre>java -jar /projects/ps-yeolab/software/picard-tools-1.93/CreateSequenceDictionary.jar R=Homo_sapiens.GRCh37.75.fa O=Homo_sapiens.GRCh37.75.dict
+</pre></div>
+
+
+<p>Now we are ready to run the <code>FastaAlternativeReferenceMaker</code> command. My compiled <code>GATK</code> distribution is in <code>~/workspace-git/gatk/dist</code>, and again, yours is probably somewhere else. I&#8217;ve separated this out onto several lines so it&#8217;s easier to&nbsp;read.</p>
+<div class="highlight"><pre> java -Xmx2g -jar ~/workspace-git/gatk/dist/GenomeAnalysisTK.jar \
+    -R /projects/ps-yeolab/genomes/ensembl/v75/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.75.fa  \
+    -T FastaAlternateReferenceMaker \
+    -o /projects/ps-yeolab/genomes/ensembl/v75/fasta/homo_sapiens/dna/Venter.fasta \
+    --variant /projects/ps-yeolab/genomes/ensembl/v75/variation/vcf/homo_sapiens/Venter.sorted.vcf
+</pre></div>
+            <a href="#" class="go-top">Go Top</a>
+    <div class="comments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "sciencemeetproductivity"; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+<footer class="footer">
+    <p>&copy; Olga Botvinnik &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>        </div>
+    </div>
+    </div>
+    <script>
+        var $top = $('.go-top');
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $top.fadeIn(200);
+            } else {
+                $top.fadeOut(200);
+            }
+        });
+
+        // Animate the scroll to top
+        $top.click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+
+        // Makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        $('body').on('click', 'a[href="#"]', function(event) {
+            event.preventDefault();
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-53680167-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+    </script>
+
+</body>
+</html>
