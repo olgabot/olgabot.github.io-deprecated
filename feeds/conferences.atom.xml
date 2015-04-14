@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Science, meet productivity</title><link href="/" rel="alternate"></link><link href="/feeds/conferences.atom.xml" rel="self"></link><id>/</id><updated>2015-04-12T22:21:00-07:00</updated><entry><title>CodeNeuro NYC 2015</title><link href="/blog/2015/04/12/codeneuro-nyc-2015/" rel="alternate"></link><updated>2015-04-12T22:21:00-07:00</updated><author><name>Olga Botvinnik</name></author><id>tag:,2015-04-12:blog/2015/04/12/codeneuro-nyc-2015/</id><summary type="html">&lt;p&gt;Last weekend I attended the &lt;a href="http://codeneuro.org/2015/NYC/"&gt;CodeNeuro &lt;span class="caps"&gt;NYC&lt;/span&gt;&lt;/a&gt;
+conference, which is a conference for neuroscientists, programmers, and
+everything in between. It was a unique experience because it had both the
+excitement and energy of a tech conference, and the pure, unadulterated zest
+for knowledge of a scientific&amp;nbsp;conference.&lt;/p&gt;
+&lt;h2&gt;Day 1: Talks and&amp;nbsp;panel&lt;/h2&gt;
+&lt;p&gt;The first day of the conference started after the workday on Friday at 5pm at
+the &lt;a href="http://www.newmuseum.org/"&gt;New Museum&lt;/a&gt; in Little Italy, Manhattan, &lt;span class="caps"&gt;NYC&lt;/span&gt;.
+This was the first time I&amp;#8217;d been to this place and it was really awesome, even
+from the outside! Check it&amp;nbsp;out:&lt;/p&gt;
+&lt;p&gt;[photo of&amp;nbsp;outside]&lt;/p&gt;
+&lt;p&gt;The conference kicked off with some mingling and beer (Pabst Blue Ribbon aka
+&lt;span class="caps"&gt;PBR&lt;/span&gt; to be specific &amp;#8230; a little too bro-y/hipster-y for me personally so I
+abstained. I &lt;em&gt;did&lt;/em&gt; tell the organizers I would have appreciated some wine,
+though&amp;nbsp;:).&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;&lt;a href="https://twitter.com/hashtag/PBR?src=hash"&gt;#&lt;span class="caps"&gt;PBR&lt;/span&gt;&lt;/a&gt; a plenty &lt;a href="https://twitter.com/CodeNeuro"&gt;@CodeNeuro&lt;/a&gt; and we&amp;#39;re ready to start! &lt;a href="http://t.co/QpJ3nIYk2J"&gt;pic.twitter.com/QpJ3nIYk2J&lt;/a&gt;&lt;/p&gt;&amp;mdash; paco nathan (@pacoid) &lt;a href="https://twitter.com/pacoid/status/586649963133853697"&gt;April 10, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;I only knew three people coming in to the conference, &lt;a href="http://www.janelia.org/people/scientist/nick-sofroniew"&gt;Nick
+Sofroniew&lt;/a&gt;, with whom
+I did an &lt;a href="http://www.janelia.org/student-programs/undergraduate-program#722"&gt;undergrad summer program&lt;/a&gt; and put me in touch with the conference in the
+first place, &lt;a href="http://www.jeremyfreeman.net/"&gt;Jeremy Freeman&lt;/a&gt;, who organized
+the whole freakin&amp;#8217; thing and invited me to give a talk and tutorial, and &lt;a href="https://twitter.com/bensussman"&gt;Ben
+Sussman&lt;/a&gt;, who co-taught the &lt;code&gt;gitgoing&lt;/code&gt;
+tutorial with me and is an all-around awesome person. But the space was rad,
+we had a balcony and a nice view of the city, and I got to meet a bunch of
+people doing super interesting things in&amp;nbsp;neuroscience.&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;view from &lt;a href="https://twitter.com/CodeNeuro"&gt;@CodeNeuro&lt;/a&gt;&amp;#8230; &lt;a href="http://t.co/kInTbaFWHW"&gt;pic.twitter.com/kInTbaFWHW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Angela Radulescu (@angitweets) &lt;a href="https://twitter.com/angitweets/status/586659812198522880"&gt;April 10, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;[photo collage/click through? of photos, mine plus curated from twitter from the&amp;nbsp;event]&lt;/p&gt;
+&lt;p&gt;We got started with the talks, which we had three 10 minute (ish) talks, followed by a half hour (ish) break. It was a nice format that we could chat and break in between the talks not only to get a mental break but also discuss the concepts presented by the previous talks in the context of neuroscience. Here&amp;#8217;s all the&amp;nbsp;talks:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Adam Packer (&lt;span class="caps"&gt;UCL&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;Eiman Azim (Columbia): Using optogenetics to understand&amp;nbsp;interneurons&lt;/li&gt;
+&lt;li&gt;Randal Burns (Johns Hopkins): Open Connectome project using &lt;span class="caps"&gt;CATMAID&lt;/span&gt; [&lt;a href="https://github.com/openconnectome/ocpcatmaid"&gt;github repo&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Paco Nathan (Databricks): Spark for big&amp;nbsp;data&lt;/li&gt;
+&lt;li&gt;Eliza Chang (The Data&amp;nbsp;Incubator): &lt;/li&gt;
+&lt;li&gt;Michael Dewar (&lt;span class="caps"&gt;NYT&lt;/span&gt;): Real-time analytics on streaming data [&lt;a href="https://github.com/mikedewar/codeneuro_streamtools"&gt;github repo for presentation&lt;/a&gt;] | [&lt;a href="https://github.com/nytlabs/streamtools"&gt;github repo for &lt;code&gt;streamtools&lt;/code&gt; package&lt;/a&gt;] &lt;/li&gt;
+&lt;li&gt;Hilary Parker (Etsy): Data science at Etsy (+cute statistical&amp;nbsp;plushies!)&lt;/li&gt;
+&lt;li&gt;Brendan Lake (&lt;span class="caps"&gt;NYU&lt;/span&gt;): Teaching computers to scribble characters like&amp;nbsp;humans&lt;/li&gt;
+&lt;li&gt;Olga Botvinnik, me! (&lt;span class="caps"&gt;UCSD&lt;/span&gt;): &lt;code&gt;flotilla&lt;/code&gt;: An open-source Python package for iterative machine learning analyses [&lt;a href="http://nbviewer.ipython.org/format/slides/gist/olgabot/2ee1087d74df46c842df#/"&gt;slides&lt;/a&gt;]&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;My top three favorite talks&amp;nbsp;were:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;NYT&lt;/span&gt; R&amp;amp;D demo&lt;/strong&gt; This was a fantastic talk about streaming data analytics.  He
+and his team had created an interactive way to analyze real-time data. They
+had a &lt;span class="caps"&gt;GUI&lt;/span&gt; interface where you could select boxes that represented an action on
+data (&lt;a href="http://en.wikipedia.org/wiki/Extract,_transform,_load"&gt;extract, transform, load aka
+&lt;span class="caps"&gt;ETL&lt;/span&gt;&lt;/a&gt;-like things), and
+you could string these boxes together to create an analysis pipeline. It
+reminded me a lot of the &lt;a href="https://usegalaxy.org/"&gt;Galaxy&lt;/a&gt; interface for
+reproducible bioinformatics pipelines. Check out the tweet below for a&amp;nbsp;screenshot:&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;Picture of &lt;a href="https://twitter.com/hashtag/realTimeData?src=hash"&gt;#realTimeData&lt;/a&gt; including mine &lt;a href="https://twitter.com/hashtag/codeNeuro?src=hash"&gt;#codeNeuro&lt;/a&gt; &lt;a href="http://t.co/VCIfFlFHTK"&gt;pic.twitter.com/VCIfFlFHTK&lt;/a&gt;&lt;/p&gt;&amp;mdash; aybuke turker (@aybuketurker) &lt;a href="https://twitter.com/aybuketurker/status/586678871942111232"&gt;April 10, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Optogenetics&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;A. Packer shows some amazing tools to simultaneously record + stimulate ensembles of neurons with &lt;a href="https://twitter.com/hashtag/CaImaging?src=hash"&gt;#CaImaging&lt;/a&gt; and &lt;a href="https://twitter.com/hashtag/optogenetics?src=hash"&gt;#optogenetics&lt;/a&gt;. &lt;a href="https://twitter.com/hashtag/codeneuro?src=hash"&gt;#codeneuro&lt;/a&gt;&lt;/p&gt;&amp;mdash; Felipe Gerhard (@neuroflips) &lt;a href="https://twitter.com/neuroflips/status/586685623068717056"&gt;April 11, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Spark&lt;/strong&gt;. This was an awesome talk by &lt;a href="http://liber118.com/pxn/"&gt;Paco Nathan&lt;/a&gt;
+on using big data tools. Paco had worked with both Hadoop and Spark and gave a
+great overview of the history of Big Data (which he pinpointed to Q3 1997),
+the different papers about it and tools for it, and where Spark fits in that
+ecosystem. He gave a few use cases and was overall just a very entertaining&amp;nbsp;presenter.&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;Great talk by &lt;a href="https://twitter.com/placoid"&gt;@placoid&lt;/a&gt; at &lt;a href="https://twitter.com/CodeNeuro"&gt;@CodeNeuro&lt;/a&gt; just now - apparently rotational bearings on planes create 12 exabytes of data / day&amp;#8230; wow &lt;a href="https://twitter.com/hashtag/bigdata?src=hash"&gt;#bigdata&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alice Lloyd George (@&lt;span class="caps"&gt;AMLG23&lt;/span&gt;) &lt;a href="https://twitter.com/AMLG23/status/586689726196883458"&gt;April 11, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;[The most retweeted talks?? Maybe a Storify of the @CodeNeuro account for April 10th&amp;nbsp;2015]&lt;/p&gt;
+&lt;p&gt;After all the talks, there was a panel led by Jeremy with some giants of
+neuroscientists, Tony Movshon, Eve Marder and Larry Abbott. A recurring theme
+was that the fundamental questions of how the brain works hasn&amp;#8217;t changed, but
+the tools have drastically&amp;nbsp;changed.&lt;/p&gt;
+&lt;p&gt;One story that stuck with me was Eve describing that when she was doing
+experiments, she used an
+&lt;a href="http://en.wikipedia.org/wiki/Oscilloscope"&gt;oscilloscope&lt;/a&gt; to listen (yes, with
+her ears! I thought this was amazing!) to the measurements from neurons, and
+there was a direct, phsyical, visceral reaction that when you designed an
+experiment and heard specific tones, you knew &lt;strong&gt;exactly&lt;/strong&gt; what that meant,
+because you were intimately familiar with the exact tones and sounds produced
+by the device. But now, she said, the high throughput methods, while capable
+of measuring many things at once, are so detached from the physicality of
+neurons firing that she feels people aren&amp;#8217;t connected to what they&amp;#8217;re
+measuring anymore. I found that interesting because in my field of &lt;span class="caps"&gt;RNA&lt;/span&gt;
+biology, we&amp;#8217;ll do these newfangled &lt;a href="http://en.wikipedia.org/wiki/DNA_sequencing#Next-
+generation_methods"&gt;high-throughput sequencing
+experiments&lt;/a&gt; to measure &lt;span class="caps"&gt;RNA&lt;/span&gt; expression as a proxy for protein
+abundance, and study the &lt;a href="http://en.wikipedia.org/wiki/Alternative_splicing"&gt;alternative
+splicing&lt;/a&gt; of these &lt;span class="caps"&gt;RNA&lt;/span&gt;
+transcripts, but every time, we always have to validate our findings using an
+older, low-throughput method like &lt;a href="http://en.wikipedia.org/wiki/Revers
+e_transcription_polymerase_chain_reaction"&gt;&lt;span class="caps"&gt;RT&lt;/span&gt;-&lt;span class="caps"&gt;PCR&lt;/span&gt;&lt;/a&gt;. I don&amp;#8217;t know what the equivalent
+experiments are in neuroscience, because it seems all very magical to me that
+they&amp;#8217;re able to manipulate individual neurons in mice, but I also wonder if
+it&amp;#8217;s known that the neuron in the exact same position in one animal and
+another animal, do the exact same thing. So far, biology has relied on laws of
+averages, so if you do a high throughput experiment on a bunch of cells and
+get an average signal, you should get that same result if you do a low-
+throughput version of that experiment. I don&amp;#8217;t know what the equivalent of
+that is in neuroscience, but it was refreshing to hear that neuro has its own
+share of growing pains as its adopted its own high-throughput techniques, and
+that biology wasn&amp;#8217;t the only&amp;nbsp;one.&lt;/p&gt;
+&lt;p&gt;It was interesting to hear about the challenges of neuroscience, of how
+excited people are about optogenetics, and how many people are apparently
+skeptical of &lt;a href="http://en.wikipedia.org/wiki/Functional_magnetic_resonance_imaging"&gt;functional magentic resonance
+imaging&lt;/a&gt;
+(fMRI) data, and how nobody knows what the &lt;a href="http://en.wikipedia.org/wiki/Cerebral_cortex"&gt;cerebral
+cortex&lt;/a&gt;&amp;nbsp;does!&lt;/p&gt;
+&lt;h2&gt;Day 2: Tutorials +&amp;nbsp;Hackathon&lt;/h2&gt;
+&lt;p&gt;The next morning we were in the &lt;a href="http://www.newinc.org/"&gt;New, Inc&lt;/a&gt; coworking
+space, and started off with some kickass bagels and&amp;nbsp;lox/salmon:&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;breakfast begins &lt;a href="http://t.co/55QljXZqkw"&gt;pic.twitter.com/55QljXZqkw&lt;/a&gt;&lt;/p&gt;&amp;mdash; CodeNeuro (@CodeNeuro) &lt;a href="https://twitter.com/CodeNeuro/status/586893786212651008"&gt;April 11, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;[Photo of everyone from dinner]
+If you want to look through all the tweets from the entire event, check out this &lt;a href="https://storify.com/yangbodu/codeneuro"&gt;Storify&lt;/a&gt;&amp;nbsp;board.&lt;/p&gt;</summary><category term="programming"></category><category term="conferences"></category><category term="bioinformatics"></category><category term="neuroscience"></category></entry></feed>
