@@ -76,19 +76,11 @@ the <a href="http://www.newmuseum.org/">New Museum</a> in Little Italy, Manhatta
 This was the first time I&#8217;d been to this place and it was really awesome, even
 from the outside! Check it&nbsp;out:</p>
 <p>[photo of&nbsp;outside]</p>
-<p>The conference kicked off with some mingling and beer (Pabst Blue Ribbon aka
-<span class="caps">PBR</span> to be specific &#8230; a little too bro-y/hipster-y for me personally so I
-abstained. I <em>did</em> tell the organizers I would have appreciated some wine,
-though&nbsp;:).</p>
-<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/hashtag/PBR?src=hash">#<span class="caps">PBR</span></a> a plenty <a href="https://twitter.com/CodeNeuro">@CodeNeuro</a> and we&#39;re ready to start! <a href="http://t.co/QpJ3nIYk2J">pic.twitter.com/QpJ3nIYk2J</a></p>&mdash; paco nathan (@pacoid) <a href="https://twitter.com/pacoid/status/586649963133853697">April 10, 2015</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>I only knew three people coming in to the conference, <a href="http://www.janelia.org/people/scientist/nick-sofroniew">Nick
+<p>(<span class="caps">FYI</span> If you want to look through all the tweets from the entire event, check out this <a href="https://storify.com/yangbodu/codeneuro">Storify</a>&nbsp;board.)</p>
+<p>The conference kicked off with some mingling and beer. I gravitated towards the three I knew people coming in to the conference, <a href="http://www.janelia.org/people/scientist/nick-sofroniew">Nick
 Sofroniew</a>, with whom
-I did an <a href="http://www.janelia.org/student-programs/undergraduate-program#722">undergrad summer program</a> and put me in touch with the conference in the
-first place, <a href="http://www.jeremyfreeman.net/">Jeremy Freeman</a>, who organized
-the whole freakin&#8217; thing and invited me to give a talk and tutorial, and <a href="https://twitter.com/bensussman">Ben
+I did an <a href="http://www.janelia.org/student-programs/undergraduate-program#722">undergrad summer program</a> and invited me to talk, <a href="http://www.jeremyfreeman.net/">Jeremy Freeman</a>, the main organizer of
+the whole freakin&#8217; thing, and <a href="https://twitter.com/bensussman">Ben
 Sussman</a>, who co-taught the <code>gitgoing</code>
 tutorial with me and is an all-around awesome person. But the space was rad,
 we had a balcony and a nice view of the city, and I got to meet a bunch of
@@ -100,16 +92,17 @@ people doing super interesting things in&nbsp;neuroscience.</p>
 <p>[photo collage/click through? of photos, mine plus curated from twitter from the&nbsp;event]</p>
 <p>We got started with the talks, which we had three 10 minute (ish) talks, followed by a half hour (ish) break. It was a nice format that we could chat and break in between the talks not only to get a mental break but also discuss the concepts presented by the previous talks in the context of neuroscience. Here&#8217;s all the&nbsp;talks:</p>
 <ol>
-<li>Adam Packer (<span class="caps">UCL</span>)</li>
-<li>Eiman Azim (Columbia): Using optogenetics to understand&nbsp;interneurons</li>
+<li>Adam Packer (<span class="caps">UCL</span>): All optical recording and manipulation of individual&nbsp;neurons</li>
+<li>Eiman Azim (Columbia): Quantitative behavior and mouse genetics for probing motor circuit&nbsp;function</li>
 <li>Randal Burns (Johns Hopkins): Open Connectome project using <span class="caps">CATMAID</span> [<a href="https://github.com/openconnectome/ocpcatmaid">github repo</a>]</li>
 <li>Paco Nathan (Databricks): Spark for big&nbsp;data</li>
-<li>Eliza Chang (The Data&nbsp;Incubator): </li>
+<li>Eliza Chang (The Data Incubator): PhD to Data&nbsp;Scientist</li>
 <li>Michael Dewar (<span class="caps">NYT</span>): Real-time analytics on streaming data [<a href="https://github.com/mikedewar/codeneuro_streamtools">github repo for presentation</a>] | [<a href="https://github.com/nytlabs/streamtools">github repo for <code>streamtools</code> package</a>] </li>
 <li>Hilary Parker (Etsy): Data science at Etsy (+cute statistical&nbsp;plushies!)</li>
 <li>Brendan Lake (<span class="caps">NYU</span>): Teaching computers to scribble characters like&nbsp;humans</li>
 <li>Olga Botvinnik, me! (<span class="caps">UCSD</span>): <code>flotilla</code>: An open-source Python package for iterative machine learning analyses [<a href="http://nbviewer.ipython.org/format/slides/gist/olgabot/2ee1087d74df46c842df#/">slides</a>]</li>
 </ol>
+<p>As you can imagine from the caliber of all the other talks, I was super nervous for mine! because I&#8217;m not doing things at exabyte scale, I&#8217;m not doing streaming data, and I&#8217;m not even doing neuroscience! I&#8217;m just analyzing static datasets with the usual machine learning algorithms. But as Jeremy pointed out, we need better tools for analyzing the existing non-big data datasets that we have, plus I got great questions and feedback from the talk which was&nbsp;great.</p>
 <p>My top three favorite talks&nbsp;were:</p>
 <p><strong><span class="caps">NYT</span> R&amp;D demo</strong> This was a fantastic talk about streaming data analytics.  He
 and his team had created an interactive way to analyze real-time data. They
@@ -184,8 +177,53 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>[Photo of everyone from dinner]
-If you want to look through all the tweets from the entire event, check out this <a href="https://storify.com/yangbodu/codeneuro">Storify</a>&nbsp;board.</p>
+<h3><code>gitgoing</code> tutorial</h3>
+<p>Then, Ben Sussman and I taught a tutorial called <a href="https://github.com/CodeNeuro/gitgoing">gitgoing</a> to quickly teach scientists the version control system <a href="http://en.wikipedia.org/wiki/Git_%28software%29"><code>git</code></a> and code testing via <a href="http://pytest.org/"><code>py.test</code></a> and integration systems via <a href="https://travis-ci.org/">Travis-<span class="caps">CI</span></a>. The goal was to get the scientists acquainted with common tools in open source software so that they could contribute themselves. It was kind of like a mini <a href="http://software-carpentry.org/">Software Carpentry</a> workshop, but we assumed our target audience had some coding experience, and we didn&#8217;t take the time to explain computer science fundamentals like variables, loops, flow control,&nbsp;etc.</p>
+<p>Our class was structured exactly as laid out in the <code>README.md</code> file. First we setup their computers so they had <code>git</code> and Python 2.7. This took about an hour total to get everyone done. Some people finished faster and started moving on to the <code>git</code> section. Then Ben did an awesome explanation of <code>git</code>, and I learned a bunch of stuff! I didn&#8217;t realize that when you <code>git clone</code> a repo, you&#8217;re getting <span class="caps">ENTIRE</span> history of the project, so that makes sense why downloading all of <a href="ipython.org">IPython</a>/<a href="https://jupyter.org/">Jupyter</a> takes forever. It was also a really helpful analogy to describe the entire repository as an &#8220;ocean of code,&#8221; and that a branch is a single window into that ocean. We also talked about merge conflicts, and how they can be really easy to create if, say someone renamed one of the arguments of a function, and someone else added an argument, and then <code>git</code> doesn&#8217;t know what to do anymore. They picked up on testing pretty quickly, and someone asked &#8220;well if <code>git</code> thinks it&#8217;s okay, but how do you know the code will run?&#8221; Which brought us directly to&nbsp;testing!</p>
+<p>Next, I talked about testing and why it&#8217;s important. I wrote some simple Python code with functions like <code>mean_plus_one</code>, <code>std_plus_one</code>, and <code>cv</code> (coefficient of variance). They were just slight variations on the true <a href="http://www.numpy.org/"><code>numpy</code></a> functions so the learners couldn&#8217;t just use the <code>numpy</code> version. We looked at the test file, <code>test_gitgoing.py</code> which used <code>py.test</code><span class="quo">&#8216;</span>s fixtures, which take care of the <code>setUp</code> and <code>tearDown</code> methods that some other testing frameworks have. We saw a simple example of fixtures, which creates a 20x10 matrix of normally distributed random numbers. These could have been set as integers, I just wanted to illustrate how you can create new fixtures from existing&nbsp;ones.</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">n_rows</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">20</span>
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">n_cols</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">10</span>
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">x_norm</span><span class="p">(</span><span class="n">n_rows</span><span class="p">,</span> <span class="n">n_cols</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_rows</span><span class="p">,</span> <span class="n">n_cols</span><span class="p">)</span>
+</pre></div>
+
+
+<p>There is a commented out broken test in the repo which they had to fix, which was a great formative assessment because they had to use their newly formed <code>git</code> and testing knowledge to fix the test, commit the changes, make a branch of their &#8220;feature&#8221; fixing the test, pushing to the branch, and making a pull request to the master branch. It was really rewarding for the students to see their pull request on Github, and to see their commits on the network of contributors to the <code>gitgoing</code> repo.</p>
+<p>We unfortunately didn&#8217;t advertise the #gitgoing hashtag before the tutorial so we didn&#8217;t get any live-tweets, but Ben and I mitigated this and took a picture&nbsp;afterwards:</p>
+<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/hashtag/gitgoing?src=hash">#gitgoing</a> at <a href="https://twitter.com/CodeNeuro">@CodeNeuro</a>! Thanks <a href="https://twitter.com/bensussman">@bensussman</a> for being an awesome co-teacher and everyone for coming! <a href="http://t.co/l0BUhoeWja">pic.twitter.com/l0BUhoeWja</a></p>&mdash; Olga Botvinnik (@olgabot) <a href="https://twitter.com/olgabot/status/586980895397019650">April 11, 2015</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h3>Spark&nbsp;tutorial</h3>
+<p>After the <code>gitgoing</code> tutorial we had a break and mingled. Then, I went to the Spark tutorial, taught by <a href="">Paco Nathan</a> from <a href="">DataBricks</a> (slides <a href="http://training.databricks.com/workshop/dbc_intro.pdf">here</a>). I&#8217;ve seen Spark demos before but I haven&#8217;t put in the time to play around with the tools, so this was a great way to get&nbsp;exposed!</p>
+<p>I was a little late to the tutorial, so I missed the initial setup. I was handed a slip of paper with a url, username and password that was my personal login to the DataBricks cloud. Paco was doing a &#8220;preflight check&#8221; of explaining different Spark concepts before we dove in. The key things I took away&nbsp;were:</p>
+<ul>
+<li><strong><span class="caps">RDD</span></strong>: Resilient Distributed Dataset. This is the core unit of a spark analysis, where you load in data, and use Spark to indicate that you want it to be&nbsp;parallelized.</li>
+<li><strong><code>sc</code></strong>: &#8220;Spark context.&#8221; This is the object that exists in all the Python library versions with Spark, and is the object that you will be using to create and operate on&nbsp;datasets. </li>
+</ul>
+<p>We used an IPython notebook-style <a href=""><span class="caps">REPL</span></a> </p>
+<h3>Hackathon</h3>
+<h2>Acknowledgements</h2>
+<p>Finally, I want to acknowledge all the organizers of the&nbsp;event:</p>
+<ul>
+<li>Jeremy&nbsp;Freeman</li>
+<li>Nick&nbsp;Sofroniew</li>
+<li><a href="http://graphics.stanford.edu/~broxton/">Michael&nbsp;Broxton</a></li>
+<li><a href="http://web.stanford.edu/~logang/">Logan&nbsp;Grosenick</a></li>
+<li><a href="https://twitter.com/dgangul1">Deep&nbsp;Ganguli</a></li>
+<li><a href="https://twitter.com/hackingdata">Jeff&nbsp;Hammerbacher</a></li>
+</ul>
+<p>[Photo of everyone from&nbsp;dinner]</p>
             <a href="#" class="go-top">Go Top</a>
     <div class="comments">
         <div id="disqus_thread"></div>
