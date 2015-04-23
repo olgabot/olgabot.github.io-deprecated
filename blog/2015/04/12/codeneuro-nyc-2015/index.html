@@ -100,7 +100,7 @@ people doing super interesting things in&nbsp;neuroscience.</p>
 <li>Paco Nathan (Databricks): Spark for big&nbsp;data</li>
 <li>Eliza Chang (The Data Incubator): PhD to Data&nbsp;Scientist</li>
 <li>Michael Dewar (<span class="caps">NYT</span>): Real-time analytics on streaming data [<a href="https://github.com/mikedewar/codeneuro_streamtools">github repo for presentation</a>] | [<a href="https://github.com/nytlabs/streamtools">github repo for <code>streamtools</code> package</a>] </li>
-<li>Hilary Parker (Etsy): Data science at Etsy (+cute statistical&nbsp;plushies!)</li>
+<li>Hilary Parker (Etsy): Data science at Etsy (+<a href="https://twitter.com/CodeNeuro/status/586696965502689280">cute statistical plushies</a>!)</li>
 <li>Brendan Lake (<span class="caps">NYU</span>): Teaching computers to scribble characters like&nbsp;humans</li>
 <li>Olga Botvinnik, me! (<span class="caps">UCSD</span>): <code>flotilla</code>: An open-source Python package for iterative machine learning analyses [<a href="http://nbviewer.ipython.org/format/slides/gist/olgabot/2ee1087d74df46c842df#/">slides</a>]</li>
 </ol>
@@ -132,7 +132,6 @@ ecosystem. He gave a few use cases and was overall just a very entertaining&nbsp
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>[The most retweeted talks?? Maybe a Storify of the @CodeNeuro account for April 10th&nbsp;2015]</p>
 <p>After all the talks, there was a panel led by Jeremy with some giants of
 neuroscientists, Tony Movshon, Eve Marder and Larry Abbott. A recurring theme
 was that the fundamental questions of how the brain works hasn&#8217;t changed, but
@@ -181,9 +180,40 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 
 <p>Then, people split up about 50/50 for the tutorials and the&nbsp;hackathon.</p>
 <h3><code>gitgoing</code> tutorial</h3>
-<p>Then, Ben Sussman and I taught a tutorial called <a href="https://github.com/CodeNeuro/gitgoing">gitgoing</a> to quickly teach scientists the version control system <a href="http://en.wikipedia.org/wiki/Git_%28software%29"><code>git</code></a> and code testing via <a href="http://pytest.org/"><code>py.test</code></a> and integration systems via <a href="https://travis-ci.org/">Travis-<span class="caps">CI</span></a>. We had about 20-30 attendees. The goal was to get the scientists acquainted with common tools in open source software so that they could contribute themselves. It was kind of like a mini <a href="http://software-carpentry.org/">Software Carpentry</a> workshop, but we assumed our target audience had some coding experience, and we didn&#8217;t take the time to explain computer science fundamentals like variables, loops, flow control,&nbsp;etc.</p>
-<p>Our class was structured exactly as laid out in the <code>README.md</code> file. First we setup their computers so they had <code>git</code> and Python 2.7. This took about an hour total to get everyone done. Some people finished faster and started moving on to the <code>git</code> section. Then Ben did an awesome explanation of <code>git</code>, and I learned a bunch of stuff! I didn&#8217;t realize that when you <code>git clone</code> a repo, you&#8217;re getting <span class="caps">ENTIRE</span> history of the project, so that makes sense why downloading all of <a href="ipython.org">IPython</a>/<a href="https://jupyter.org/">Jupyter</a> takes forever. It was also a really helpful analogy to describe the entire repository as an &#8220;ocean of code,&#8221; and that a branch is a single window into that ocean. We also talked about merge conflicts, and how they can be really easy to create if, say someone renamed one of the arguments of a function, and someone else added an argument, and then <code>git</code> doesn&#8217;t know what to do anymore. They picked up on testing pretty quickly, and someone asked &#8220;well if <code>git</code> thinks it&#8217;s okay, but how do you know the code will run?&#8221; Which brought us directly to&nbsp;testing!</p>
-<p>Next, I talked about testing and why it&#8217;s important. I wrote some simple Python code with functions like <code>mean_plus_one</code>, <code>std_plus_one</code>, and <code>cv</code> (coefficient of variance). They were just slight variations on the true <a href="http://www.numpy.org/"><code>numpy</code></a> functions so the learners couldn&#8217;t just use the <code>numpy</code> version. We looked at the test file, <code>test_gitgoing.py</code> which used <code>py.test</code><span class="quo">&#8216;</span>s fixtures, which take care of the <code>setUp</code> and <code>tearDown</code> methods that some other testing frameworks have. We saw a simple example of fixtures, which creates a 20x10 matrix of normally distributed random numbers. These could have been set as integers, I just wanted to illustrate how you can create new fixtures from existing&nbsp;ones.</p>
+<p>Then, Ben Sussman and I taught a tutorial called
+<a href="https://github.com/CodeNeuro/gitgoing">gitgoing</a> to quickly teach scientists
+the version control system
+<a href="http://en.wikipedia.org/wiki/Git_%28software%29"><code>git</code></a> and code testing via
+<a href="http://pytest.org/"><code>py.test</code></a> and integration systems via <a href="https://travis-ci.org/">Travis-<span class="caps">CI</span></a>. We had about 20-30 attendees. The goal was to get the
+scientists acquainted with common tools in open source software so that they
+could contribute themselves. It was kind of like a mini <a href="http://software-carpentry.org/">Software
+Carpentry</a> workshop, but we assumed our target
+audience had some coding experience, and we didn&#8217;t take the time to explain
+computer science fundamentals like variables, loops, flow control,&nbsp;etc.</p>
+<p>Our class was structured exactly as laid out in the <code>README.md</code> file. First we
+setup their computers so they had <code>git</code> and Python 2.7. This took about an hour
+total to get everyone done. Some people finished faster and started moving on to
+the <code>git</code> section. Then Ben did an awesome explanation of <code>git</code>, and I learned a
+bunch of stuff! I didn&#8217;t realize that when you <code>git clone</code> a repo, you&#8217;re
+getting <span class="caps">ENTIRE</span> history of the project, so that makes sense why downloading all
+of <a href="ipython.org">IPython</a>/<a href="https://jupyter.org/">Jupyter</a> takes forever. It was
+also a really helpful analogy to describe the entire repository as an &#8220;ocean of
+code,&#8221; and that a branch is a single window into that ocean. We also talked
+about merge conflicts, and how they can be really easy to create if, say someone
+renamed one of the arguments of a function, and someone else added an argument,
+and then <code>git</code> doesn&#8217;t know what to do anymore. They picked up on testing pretty
+quickly, and someone asked &#8220;well if <code>git</code> thinks it&#8217;s okay, but how do you know
+the code will run?&#8221; Which brought us directly to&nbsp;testing!</p>
+<p>Next, I talked about testing and why it&#8217;s important. I wrote some simple Python
+code with functions like <code>mean_plus_one</code>, <code>std_plus_one</code>, and <code>cv</code> (coefficient
+of variance). They were just slight variations on the true
+<a href="http://www.numpy.org/"><code>numpy</code></a> functions so the learners couldn&#8217;t just use the
+<code>numpy</code> version. We looked at the test file, <code>test_gitgoing.py</code> which used
+<code>py.test</code><span class="quo">&#8216;</span>s fixtures, which take care of the <code>setUp</code> and <code>tearDown</code> methods that
+some other testing frameworks have. We saw a simple example of fixtures, which
+creates a 20x10 matrix of normally distributed random numbers. These could have
+been set as integers, I just wanted to illustrate how you can create new
+fixtures from existing&nbsp;ones.</p>
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pytest</span>
 
@@ -208,7 +238,7 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <h3>Spark&nbsp;tutorial</h3>
-<p>After the <code>gitgoing</code> tutorial we had a break and mingled. Then, I went to the Spark tutorial, taught by <a href="">Paco Nathan</a> from <a href="">DataBricks</a> (slides <a href="http://training.databricks.com/workshop/dbc_intro.pdf">here</a>). I&#8217;ve seen Spark demos before but I haven&#8217;t put in the time to play around with the tools, so this was a great way to get&nbsp;exposed!</p>
+<p>After the <code>gitgoing</code> tutorial we had a break and mingled. Then, I went to the Spark tutorial, taught by <a href="http://liber118.com/pxn/">Paco Nathan</a> from <a href="https://databricks.com/">DataBricks</a> (slides <a href="http://training.databricks.com/workshop/dbc_intro.pdf">here</a>). I&#8217;ve seen Spark demos before but I haven&#8217;t put in the time to play around with the tools, so this was a great way to get&nbsp;exposed!</p>
 <p>I was a little late to the tutorial, so I missed the initial setup. I was handed a slip of paper with a url, username and password that was my personal login to the DataBricks cloud. Paco was doing a &#8220;preflight check&#8221; of explaining different Spark concepts before we dove in. The key things I took away&nbsp;were:</p>
 <ul>
 <li><strong><span class="caps">RDD</span></strong>: Resilient Distributed Dataset. This is the core unit of a spark analysis, where you load in data, and use Spark to indicate that you want it to be&nbsp;parallelized.</li>
@@ -221,16 +251,16 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 <li>Get all the second words of the error&nbsp;lines</li>
 <li>Find the errors that were caused by <code>"mysql"</code>.</li>
 </ol>
-<p>You can see a summary of my notes&nbsp;here:</p>
-<div class="highlight"><pre>lines = sc.textFile(&quot;/mnt/paco/intro/error_log.txt&quot;) \
-  .map(lambda x: x.split(&quot;\t&quot;))
-errors = lines.filter(lambda x: x[0] == &quot;ERROR&quot;)
-messages = errors.map(lambda x: x[1])
-messages.filter(lambda x: x.find(&quot;mysql&quot;) &gt; -1).count()
+<p>You can see a summary of my notes for this first section&nbsp;here:</p>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s">&quot;/mnt/paco/intro/error_log.txt&quot;</span><span class="p">)</span> \
+  <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">))</span>
+<span class="n">errors</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;ERROR&quot;</span><span class="p">)</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">errors</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">messages</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;mysql&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 
-# At this point, the data is loaded into memory on the workers and you don&#39;t
-# need to attack disk again, so this operation is very fast
-messages.filter(lambda x: x.find(&quot;php&quot;) &gt; -1).count()
+<span class="c"># At this point, the data is loaded into memory on the workers and you don&#39;t</span>
+<span class="c"># need to attack disk again, so this operation is very fast</span>
+<span class="n">messages</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;php&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 </pre></div>
 
 

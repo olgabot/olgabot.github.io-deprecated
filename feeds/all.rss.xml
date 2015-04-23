@@ -1,5 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Science, meet productivity</title><link>/</link><description></description><atom:link href="/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 07 Apr 2015 11:17:00 -0700</lastBuildDate><item><title>Things said to me</title><link>/blog/2015/04/07/things-said-to-me/</link><description>&lt;p&gt;Too long for a tweet, too short for a proper blog post, but going in here&amp;nbsp;anyway.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Science, meet productivity</title><link>/</link><description></description><atom:link href="/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 22 Apr 2015 22:21:00 -0700</lastBuildDate><item><title>CodeNeuro NYC 2015</title><link>/blog/2015/04/12/codeneuro-nyc-2015/</link><description>&lt;p&gt;Last weekend I attended the &lt;a href="http://codeneuro.org/2015/NYC/"&gt;CodeNeuro &lt;span class="caps"&gt;NYC&lt;/span&gt;&lt;/a&gt;
+conference, which is a conference for neuroscientists, programmers, and
+everything in between. It was a unique experience because it had both the
+excitement and energy of a tech conference, and the pure, unadulterated zest
+for knowledge of a scientific&amp;nbsp;conference.&lt;/p&gt;
+&lt;h2&gt;Day 1: Talks and&amp;nbsp;panel&lt;/h2&gt;
+&lt;p&gt;The first day of the conference started after the workday on Friday at 5pm at
+the &lt;a href="http://www.newmuseum.org/"&gt;New Museum&lt;/a&gt; in Little Italy, Manhattan, &lt;span class="caps"&gt;NYC&lt;/span&gt;.
+This was the first time I&amp;#8217;d been to this place and it was really awesome, even
+from the outside! Check it out, plus some other photos I took from the&amp;nbsp;conference:&lt;/p&gt;
+&lt;blockquote class="imgur-embed-pub" lang="en" data-id="a/q3c57"&gt;&lt;a href="//imgur.com/a/q3c57"&gt;codeneuro nyc 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//s.imgur.com/min/embed.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;(&lt;span class="caps"&gt;FYI&lt;/span&gt; If you want to look through all the tweets from the entire event, check out this &lt;a href="https://storify.com/yangbodu/codeneuro"&gt;Storify&lt;/a&gt;&amp;nbsp;board.)&lt;/p&gt;
+&lt;p&gt;The conference kicked off with some mingling and beer. I gravitated towards the three I knew people coming in to the conference, &lt;a href="http://www.janelia.org/people/scientist/nick-sofroniew"&gt;Nick
+Sofroniew&lt;/a&gt;, with whom
+I did an &lt;a href="http://www.janelia.org/student-programs/undergraduate-program#722"&gt;undergrad summer program&lt;/a&gt; and invited me to talk, &lt;a href="http://www.jeremyfreeman.net/"&gt;Jeremy Freeman&lt;/a&gt;, the main organizer of
+the whole freakin&amp;#8217; thing, and &lt;a href="https://twitter.com/bensussman"&gt;Ben
+Sussman&lt;/a&gt;, who co-taught the &lt;code&gt;gitgoing&lt;/code&gt;
+tutorial with me and is an all-around awesome person. But the space was rad,
+we had a balcony and a nice view of the city, and I got to meet a bunch of
+people doing super interesting things in&amp;nbsp;neuroscience.&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;view from &lt;a href="https://twitter.com/CodeNeuro"&gt;@CodeNeuro&lt;/a&gt;&amp;#8230; &lt;a href="http://t.co/kInTbaFWHW"&gt;pic.twitter.com/kInTbaFWHW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Angela Radulescu (@angitweets) &lt;a href="https://twitter.com/angitweets/status/586659812198522880"&gt;April 10, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;We got started with the talks, which we had three 10 minute (ish) talks, followed by a half hour (ish) break. It was a nice format that we could chat and break in between the talks not only to get a mental break but also discuss the concepts presented by the previous talks in the context of neuroscience. Here&amp;#8217;s all the&amp;nbsp;talks:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Adam Packer (&lt;span class="caps"&gt;UCL&lt;/span&gt;): All optical recording and manipulation of individual&amp;nbsp;neurons&lt;/li&gt;
+&lt;li&gt;Eiman Azim (Columbia): Quantitative behavior and mouse genetics for probing motor circuit&amp;nbsp;function&lt;/li&gt;
+&lt;li&gt;Randal Burns (Johns Hopkins): Open Connectome project using &lt;span class="caps"&gt;CATMAID&lt;/span&gt; [&lt;a href="https://github.com/openconnectome/ocpcatmaid"&gt;github repo&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Paco Nathan (Databricks): Spark for big&amp;nbsp;data&lt;/li&gt;
+&lt;li&gt;Eliza Chang (The Data Incubator): PhD to Data&amp;nbsp;Scientist&lt;/li&gt;
+&lt;li&gt;Michael Dewar (&lt;span class="caps"&gt;NYT&lt;/span&gt;): Real-time analytics on streaming data [&lt;a href="https://github.com/mikedewar/codeneuro_streamtools"&gt;github repo for presentation&lt;/a&gt;] | [&lt;a href="https://github.com/nytlabs/streamtools"&gt;github repo for &lt;code&gt;streamtools&lt;/code&gt; package&lt;/a&gt;] &lt;/li&gt;
+&lt;li&gt;Hilary Parker (Etsy): Data science at Etsy (+&lt;a href="https://twitter.com/CodeNeuro/status/586696965502689280"&gt;cute statistical plushies&lt;/a&gt;!)&lt;/li&gt;
+&lt;li&gt;Brendan Lake (&lt;span class="caps"&gt;NYU&lt;/span&gt;): Teaching computers to scribble characters like&amp;nbsp;humans&lt;/li&gt;
+&lt;li&gt;Olga Botvinnik, me! (&lt;span class="caps"&gt;UCSD&lt;/span&gt;): &lt;code&gt;flotilla&lt;/code&gt;: An open-source Python package for iterative machine learning analyses [&lt;a href="http://nbviewer.ipython.org/format/slides/gist/olgabot/2ee1087d74df46c842df#/"&gt;slides&lt;/a&gt;]&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;As you can imagine from the caliber of all the other talks, I was super nervous for mine! because I&amp;#8217;m not doing things at exabyte scale, I&amp;#8217;m not doing streaming data, and I&amp;#8217;m not even doing neuroscience! I&amp;#8217;m just analyzing static datasets with the usual machine learning algorithms. But as Jeremy pointed out, we need better tools for analyzing the existing non-big data datasets that we have, plus I got great questions and feedback from the talk which was&amp;nbsp;great.&lt;/p&gt;
+&lt;p&gt;My top three favorite talks&amp;nbsp;were:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;NYT&lt;/span&gt; R&amp;amp;D demo&lt;/strong&gt; This was a fantastic talk about streaming data analytics.  He
+and his team had created an interactive way to analyze real-time data. They
+had a &lt;span class="caps"&gt;GUI&lt;/span&gt; interface where you could select boxes that represented an action on
+data (&lt;a href="http://en.wikipedia.org/wiki/Extract,_transform,_load"&gt;extract, transform, load aka
+&lt;span class="caps"&gt;ETL&lt;/span&gt;&lt;/a&gt;-like things), and
+you could string these boxes together to create an analysis pipeline. It
+reminded me a lot of the &lt;a href="https://usegalaxy.org/"&gt;Galaxy&lt;/a&gt; interface for
+reproducible bioinformatics pipelines. Check out the tweet below for a&amp;nbsp;screenshot:&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;Picture of &lt;a href="https://twitter.com/hashtag/realTimeData?src=hash"&gt;#realTimeData&lt;/a&gt; including mine &lt;a href="https://twitter.com/hashtag/codeNeuro?src=hash"&gt;#codeNeuro&lt;/a&gt; &lt;a href="http://t.co/VCIfFlFHTK"&gt;pic.twitter.com/VCIfFlFHTK&lt;/a&gt;&lt;/p&gt;&amp;mdash; aybuke turker (@aybuketurker) &lt;a href="https://twitter.com/aybuketurker/status/586678871942111232"&gt;April 10, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Optogenetics&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;A. Packer shows some amazing tools to simultaneously record + stimulate ensembles of neurons with &lt;a href="https://twitter.com/hashtag/CaImaging?src=hash"&gt;#CaImaging&lt;/a&gt; and &lt;a href="https://twitter.com/hashtag/optogenetics?src=hash"&gt;#optogenetics&lt;/a&gt;. &lt;a href="https://twitter.com/hashtag/codeneuro?src=hash"&gt;#codeneuro&lt;/a&gt;&lt;/p&gt;&amp;mdash; Felipe Gerhard (@neuroflips) &lt;a href="https://twitter.com/neuroflips/status/586685623068717056"&gt;April 11, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Spark&lt;/strong&gt;. This was an awesome talk by &lt;a href="http://liber118.com/pxn/"&gt;Paco Nathan&lt;/a&gt;
+on using big data tools. Paco had worked with both Hadoop and Spark and gave a
+great overview of the history of Big Data (which he pinpointed to Q3 1997),
+the different papers about it and tools for it, and where Spark fits in that
+ecosystem. He gave a few use cases and was overall just a very entertaining&amp;nbsp;presenter.&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;Great talk by &lt;a href="https://twitter.com/placoid"&gt;@placoid&lt;/a&gt; at &lt;a href="https://twitter.com/CodeNeuro"&gt;@CodeNeuro&lt;/a&gt; just now - apparently rotational bearings on planes create 12 exabytes of data / day&amp;#8230; wow &lt;a href="https://twitter.com/hashtag/bigdata?src=hash"&gt;#bigdata&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alice Lloyd George (@&lt;span class="caps"&gt;AMLG23&lt;/span&gt;) &lt;a href="https://twitter.com/AMLG23/status/586689726196883458"&gt;April 11, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;After all the talks, there was a panel led by Jeremy with some giants of
+neuroscientists, Tony Movshon, Eve Marder and Larry Abbott. A recurring theme
+was that the fundamental questions of how the brain works hasn&amp;#8217;t changed, but
+the tools have drastically&amp;nbsp;changed.&lt;/p&gt;
+&lt;p&gt;One story that stuck with me was Eve describing that when she was doing
+experiments, she used an
+&lt;a href="http://en.wikipedia.org/wiki/Oscilloscope"&gt;oscilloscope&lt;/a&gt; to listen (yes, with
+her ears! I thought this was amazing!) to the measurements from neurons, and
+there was a direct, phsyical, visceral reaction that when you designed an
+experiment and heard specific tones, you knew &lt;strong&gt;exactly&lt;/strong&gt; what that meant,
+because you were intimately familiar with the exact tones and sounds produced
+by the device. But now, she said, the high throughput methods, while capable
+of measuring many things at once, are so detached from the physicality of
+neurons firing that she feels people aren&amp;#8217;t connected to what they&amp;#8217;re
+measuring anymore. I found that interesting because in my field of &lt;span class="caps"&gt;RNA&lt;/span&gt;
+biology, we&amp;#8217;ll do these newfangled &lt;a href="http://en.wikipedia.org/wiki/DNA_sequencing#Next-
+generation_methods"&gt;high-throughput sequencing
+experiments&lt;/a&gt; to measure &lt;span class="caps"&gt;RNA&lt;/span&gt; expression as a proxy for protein
+abundance, and study the &lt;a href="http://en.wikipedia.org/wiki/Alternative_splicing"&gt;alternative
+splicing&lt;/a&gt; of these &lt;span class="caps"&gt;RNA&lt;/span&gt;
+transcripts, but every time, we always have to validate our findings using an
+older, low-throughput method like &lt;a href="http://en.wikipedia.org/wiki/Revers
+e_transcription_polymerase_chain_reaction"&gt;&lt;span class="caps"&gt;RT&lt;/span&gt;-&lt;span class="caps"&gt;PCR&lt;/span&gt;&lt;/a&gt;. I don&amp;#8217;t know what the equivalent
+experiments are in neuroscience, because it seems all very magical to me that
+they&amp;#8217;re able to manipulate individual neurons in mice, but I also wonder if
+it&amp;#8217;s known that the neuron in the exact same position in one animal and
+another animal, do the exact same thing. So far, biology has relied on laws of
+averages, so if you do a high throughput experiment on a bunch of cells and
+get an average signal, you should get that same result if you do a low-
+throughput version of that experiment. I don&amp;#8217;t know what the equivalent of
+that is in neuroscience, but it was refreshing to hear that neuro has its own
+share of growing pains as its adopted its own high-throughput techniques, and
+that biology wasn&amp;#8217;t the only&amp;nbsp;one.&lt;/p&gt;
+&lt;p&gt;It was interesting to hear about the challenges of neuroscience, of how
+excited people are about optogenetics, and how many people are apparently
+skeptical of &lt;a href="http://en.wikipedia.org/wiki/Functional_magnetic_resonance_imaging"&gt;functional magentic resonance
+imaging&lt;/a&gt;
+(fMRI) data, and how nobody knows what the &lt;a href="http://en.wikipedia.org/wiki/Cerebral_cortex"&gt;cerebral
+cortex&lt;/a&gt;&amp;nbsp;does!&lt;/p&gt;
+&lt;h2&gt;Day 2: Tutorials +&amp;nbsp;Hackathon&lt;/h2&gt;
+&lt;p&gt;The next morning we were in the &lt;a href="http://www.newinc.org/"&gt;New, Inc&lt;/a&gt; coworking
+space, and started off with some kickass bagels and&amp;nbsp;lox/salmon:&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;breakfast begins &lt;a href="http://t.co/55QljXZqkw"&gt;pic.twitter.com/55QljXZqkw&lt;/a&gt;&lt;/p&gt;&amp;mdash; CodeNeuro (@CodeNeuro) &lt;a href="https://twitter.com/CodeNeuro/status/586893786212651008"&gt;April 11, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;Then, people split up about 50/50 for the tutorials and the&amp;nbsp;hackathon.&lt;/p&gt;
+&lt;h3&gt;&lt;code&gt;gitgoing&lt;/code&gt; tutorial&lt;/h3&gt;
+&lt;p&gt;Then, Ben Sussman and I taught a tutorial called
+&lt;a href="https://github.com/CodeNeuro/gitgoing"&gt;gitgoing&lt;/a&gt; to quickly teach scientists
+the version control system
+&lt;a href="http://en.wikipedia.org/wiki/Git_%28software%29"&gt;&lt;code&gt;git&lt;/code&gt;&lt;/a&gt; and code testing via
+&lt;a href="http://pytest.org/"&gt;&lt;code&gt;py.test&lt;/code&gt;&lt;/a&gt; and integration systems via &lt;a href="https://travis-ci.org/"&gt;Travis-&lt;span class="caps"&gt;CI&lt;/span&gt;&lt;/a&gt;. We had about 20-30 attendees. The goal was to get the
+scientists acquainted with common tools in open source software so that they
+could contribute themselves. It was kind of like a mini &lt;a href="http://software-carpentry.org/"&gt;Software
+Carpentry&lt;/a&gt; workshop, but we assumed our target
+audience had some coding experience, and we didn&amp;#8217;t take the time to explain
+computer science fundamentals like variables, loops, flow control,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;Our class was structured exactly as laid out in the &lt;code&gt;README.md&lt;/code&gt; file. First we
+setup their computers so they had &lt;code&gt;git&lt;/code&gt; and Python 2.7. This took about an hour
+total to get everyone done. Some people finished faster and started moving on to
+the &lt;code&gt;git&lt;/code&gt; section. Then Ben did an awesome explanation of &lt;code&gt;git&lt;/code&gt;, and I learned a
+bunch of stuff! I didn&amp;#8217;t realize that when you &lt;code&gt;git clone&lt;/code&gt; a repo, you&amp;#8217;re
+getting &lt;span class="caps"&gt;ENTIRE&lt;/span&gt; history of the project, so that makes sense why downloading all
+of &lt;a href="ipython.org"&gt;IPython&lt;/a&gt;/&lt;a href="https://jupyter.org/"&gt;Jupyter&lt;/a&gt; takes forever. It was
+also a really helpful analogy to describe the entire repository as an &amp;#8220;ocean of
+code,&amp;#8221; and that a branch is a single window into that ocean. We also talked
+about merge conflicts, and how they can be really easy to create if, say someone
+renamed one of the arguments of a function, and someone else added an argument,
+and then &lt;code&gt;git&lt;/code&gt; doesn&amp;#8217;t know what to do anymore. They picked up on testing pretty
+quickly, and someone asked &amp;#8220;well if &lt;code&gt;git&lt;/code&gt; thinks it&amp;#8217;s okay, but how do you know
+the code will run?&amp;#8221; Which brought us directly to&amp;nbsp;testing!&lt;/p&gt;
+&lt;p&gt;Next, I talked about testing and why it&amp;#8217;s important. I wrote some simple Python
+code with functions like &lt;code&gt;mean_plus_one&lt;/code&gt;, &lt;code&gt;std_plus_one&lt;/code&gt;, and &lt;code&gt;cv&lt;/code&gt; (coefficient
+of variance). They were just slight variations on the true
+&lt;a href="http://www.numpy.org/"&gt;&lt;code&gt;numpy&lt;/code&gt;&lt;/a&gt; functions so the learners couldn&amp;#8217;t just use the
+&lt;code&gt;numpy&lt;/code&gt; version. We looked at the test file, &lt;code&gt;test_gitgoing.py&lt;/code&gt; which used
+&lt;code&gt;py.test&lt;/code&gt;&lt;span class="quo"&gt;&amp;#8216;&lt;/span&gt;s fixtures, which take care of the &lt;code&gt;setUp&lt;/code&gt; and &lt;code&gt;tearDown&lt;/code&gt; methods that
+some other testing frameworks have. We saw a simple example of fixtures, which
+creates a 20x10 matrix of normally distributed random numbers. These could have
+been set as integers, I just wanted to illustrate how you can create new
+fixtures from existing&amp;nbsp;ones.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pytest&lt;/span&gt;
+
+&lt;span class="nd"&gt;@pytest.fixture&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;n_rows&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
+
+&lt;span class="nd"&gt;@pytest.fixture&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;n_cols&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;
+
+&lt;span class="nd"&gt;@pytest.fixture&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;x_norm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_rows&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_cols&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_rows&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_cols&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There is a commented out broken test in the repo which they had to fix, which was a great formative assessment because they had to use their newly formed &lt;code&gt;git&lt;/code&gt; and testing knowledge to fix the test, commit the changes, make a branch of their &amp;#8220;feature&amp;#8221; fixing the test, pushing to the branch, and making a pull request to the master branch. It was really rewarding for the students to see their pull request on Github, and to see their commits on the network of contributors to the &lt;code&gt;gitgoing&lt;/code&gt; repo.&lt;/p&gt;
+&lt;p&gt;We unfortunately didn&amp;#8217;t advertise the #gitgoing hashtag before the tutorial so we didn&amp;#8217;t get any live-tweets, but Ben and I mitigated this and took a picture&amp;nbsp;afterwards:&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;&lt;a href="https://twitter.com/hashtag/gitgoing?src=hash"&gt;#gitgoing&lt;/a&gt; at &lt;a href="https://twitter.com/CodeNeuro"&gt;@CodeNeuro&lt;/a&gt;! Thanks &lt;a href="https://twitter.com/bensussman"&gt;@bensussman&lt;/a&gt; for being an awesome co-teacher and everyone for coming! &lt;a href="http://t.co/l0BUhoeWja"&gt;pic.twitter.com/l0BUhoeWja&lt;/a&gt;&lt;/p&gt;&amp;mdash; Olga Botvinnik (@olgabot) &lt;a href="https://twitter.com/olgabot/status/586980895397019650"&gt;April 11, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;h3&gt;Spark&amp;nbsp;tutorial&lt;/h3&gt;
+&lt;p&gt;After the &lt;code&gt;gitgoing&lt;/code&gt; tutorial we had a break and mingled. Then, I went to the Spark tutorial, taught by &lt;a href="http://liber118.com/pxn/"&gt;Paco Nathan&lt;/a&gt; from &lt;a href="https://databricks.com/"&gt;DataBricks&lt;/a&gt; (slides &lt;a href="http://training.databricks.com/workshop/dbc_intro.pdf"&gt;here&lt;/a&gt;). I&amp;#8217;ve seen Spark demos before but I haven&amp;#8217;t put in the time to play around with the tools, so this was a great way to get&amp;nbsp;exposed!&lt;/p&gt;
+&lt;p&gt;I was a little late to the tutorial, so I missed the initial setup. I was handed a slip of paper with a url, username and password that was my personal login to the DataBricks cloud. Paco was doing a &amp;#8220;preflight check&amp;#8221; of explaining different Spark concepts before we dove in. The key things I took away&amp;nbsp;were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;span class="caps"&gt;RDD&lt;/span&gt;&lt;/strong&gt;: Resilient Distributed Dataset. This is the core unit of a spark analysis, where you load in data, and use Spark to indicate that you want it to be&amp;nbsp;parallelized.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;sc&lt;/code&gt;&lt;/strong&gt;: &amp;#8220;Spark context.&amp;#8221; This is the object that exists in all the Python library versions with Spark, and is the object that you will be using to create and operate on&amp;nbsp;datasets. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We used an IPython notebook-style &lt;a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop"&gt;&lt;span class="caps"&gt;REPL&lt;/span&gt;&lt;/a&gt; interface, which was really nice because we could see the output from our commands right away. We continued with learning how&amp;nbsp;to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Read text files and separate lines by&amp;nbsp;tabs&lt;/li&gt;
+&lt;li&gt;Filter for the first word of the line to be &lt;code&gt;ERROR&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Get all the second words of the error&amp;nbsp;lines&lt;/li&gt;
+&lt;li&gt;Find the errors that were caused by &lt;code&gt;"mysql"&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can see a summary of my notes for this first section&amp;nbsp;here:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;lines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;textFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/mnt/paco/intro/error_log.txt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; \
+  &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;ERROR&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;messages&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;mysql&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c"&gt;# At this point, the data is loaded into memory on the workers and you don&amp;#39;t&lt;/span&gt;
+&lt;span class="c"&gt;# need to attack disk again, so this operation is very fast&lt;/span&gt;
+&lt;span class="n"&gt;messages&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;php&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Yay, we learned how to read files! Always good&amp;nbsp;:)&lt;/p&gt;
+&lt;p&gt;The next part of the tutorial, we learned how to use &lt;code&gt;flatMap&lt;/code&gt;, and then how to &lt;code&gt;join&lt;/code&gt; several RDDs on their &lt;code&gt;(key, value)&lt;/code&gt; pairs. After the break, we had a mini lecture about &amp;#8220;Computational thinking&amp;#8221; where we had to use what we learned so far to find all the instances of the word &amp;#8220;Spark&amp;#8221; in two files. If you&amp;#8217;re interested, you can see my full notes &lt;a href="https://gist.github.com/olgabot/ab058876b3bda6198f25"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Hackathon&lt;/h3&gt;
+&lt;p&gt;The hackathon was centered around the &lt;a href="http://codeneuro.org/neurofinder/"&gt;neurofinder&lt;/a&gt; challenge, which is to try and extract neuronal signals from Calcium imaging data. The goals were&amp;nbsp;go:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Refine a standardized &lt;span class="caps"&gt;API&lt;/span&gt; for &amp;#8220;source extraction&amp;#8221; algorithms, including input/ouptu&amp;nbsp;formats&lt;/li&gt;
+&lt;li&gt;Work on evaluation metrics for algorithms and agree on ground truth&amp;nbsp;definition&lt;/li&gt;
+&lt;li&gt;Work on incorporating existing algorithms into this &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Work on front end/back end of a website that would automatically run submitted algorithms on the test data, get the results and upload them to a&amp;nbsp;leaderboard&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;First, everyone introduced themselves and the group organically split into a few groups: the website, &lt;span class="caps"&gt;API&lt;/span&gt; input/output formatting, implementing algorithms, and designing&amp;nbsp;metrics.&lt;/p&gt;
+&lt;p&gt;The website team was composed of five people who had web development frontend/backend experience went to work on the website. They generated some prototype websites and code &lt;strong&gt;Jeremy/Nick: is there a link for the code&amp;nbsp;here??&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Another group of about 25 worked on the &lt;span class="caps"&gt;API&lt;/span&gt; and the input/output formats, with their final notes added to &lt;a href="https://github.com/CodeNeuro/neurofinder/wiki"&gt;this wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Another group of 10-20 split to work on incorporating existing algorithms in to this &lt;span class="caps"&gt;API&lt;/span&gt;. The rest worked on defining evaluation metrics for algorithms and the &amp;#8220;ground truth&amp;#8221; definitions of &amp;#8220;what is a neuron&amp;#8221; for these methods. They implemented some evaluation metrics, and developed an initial ground truth definition of manual centers an morphological boundaries. While this initial &amp;#8220;ground truth&amp;#8221; may be circular, it&amp;#8217;s a great&amp;nbsp;start.&lt;/p&gt;
+&lt;p&gt;There were still people working well into the&amp;nbsp;evening!&lt;/p&gt;
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;the codeneuro hardcore, still rocking! &lt;a href="http://t.co/TyxmlSNOZB"&gt;pic.twitter.com/TyxmlSNOZB&lt;/a&gt;&lt;/p&gt;&amp;mdash; CodeNeuro (@CodeNeuro) &lt;a href="https://twitter.com/CodeNeuro/status/587072775057231872"&gt;April 12, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;Afterwards, we all hung out at a nice&amp;nbsp;dinner:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="CodeNeuro after-dinner party" src="http://i.imgur.com/KY9smQR.jpg" /&gt;&lt;/p&gt;
+&lt;h2&gt;Acknowledgements&lt;/h2&gt;
+&lt;p&gt;Finally, I want to acknowledge all the organizers of the&amp;nbsp;event:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jeremy&amp;nbsp;Freeman&lt;/li&gt;
+&lt;li&gt;Nick&amp;nbsp;Sofroniew&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://graphics.stanford.edu/~broxton/"&gt;Michael&amp;nbsp;Broxton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://web.stanford.edu/~logang/"&gt;Logan&amp;nbsp;Grosenick&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/dgangul1"&gt;Deep&amp;nbsp;Ganguli&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/hackingdata"&gt;Jeff&amp;nbsp;Hammerbacher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Olga Botvinnik</dc:creator><pubDate>Wed, 22 Apr 2015 22:21:00 -0700</pubDate><guid>tag:,2015-04-12:blog/2015/04/12/codeneuro-nyc-2015/</guid><category>programming</category><category>conferences</category><category>bioinformatics</category><category>neuroscience</category></item><item><title>Things said to me</title><link>/blog/2015/04/07/things-said-to-me/</link><description>&lt;p&gt;Too long for a tweet, too short for a proper blog post, but going in here&amp;nbsp;anyway.&lt;/p&gt;
 &lt;p&gt;I read the &lt;a href="http://the-toast.net/2015/04/01/things-male-tech-colleagues-have-actually-said-annotated/"&gt;things my male tech colleagues have said to me&lt;/a&gt; article and thought about my own experience. Thankfully I haven&amp;#8217;t been subjected to nearly as many microagressions (but hey I&amp;#8217;m still young! there&amp;#8217;s plenty of time!), but there were a few points that resonated wih&amp;nbsp;me:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;You don&amp;#8217;t look like you&amp;#8230;&amp;#8221;&lt;/strong&gt; or &lt;strong&gt;&amp;#8220;Most girls aren&amp;#8217;t &amp;#8230;&amp;#8221;&lt;/strong&gt;* Boston is a melting pot of colleges and you&amp;#8217;ll often start conversations at parties with, &amp;#8220;What school do you go to?&amp;#8221; I got tired of hearing &amp;#8220;You don&amp;#8217;t look like you {go to &lt;span class="caps"&gt;MIT&lt;/span&gt;, major in math/eng}&amp;#8221; when guys asked me this at parties in college, so my friend and I started to respond with &amp;#8220;guess&amp;#8221; when asked, and they were usually taken aback. They&amp;#8217;d say &amp;#8220;Well only &lt;span class="caps"&gt;MIT&lt;/span&gt; girls would say that, so you must go to &lt;span class="caps"&gt;MIT&lt;/span&gt;.&amp;#8221; At least I turned it around on&amp;nbsp;them.&lt;/li&gt;
