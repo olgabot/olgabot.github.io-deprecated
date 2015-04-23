@@ -74,8 +74,11 @@ for knowledge of a scientific&nbsp;conference.</p>
 <p>The first day of the conference started after the workday on Friday at 5pm at
 the <a href="http://www.newmuseum.org/">New Museum</a> in Little Italy, Manhattan, <span class="caps">NYC</span>.
 This was the first time I&#8217;d been to this place and it was really awesome, even
-from the outside! Check it&nbsp;out:</p>
-<p>[photo of&nbsp;outside]</p>
+from the outside! Check it out, plus some other photos I took from the&nbsp;conference:</p>
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/q3c57"><a href="//imgur.com/a/q3c57">codeneuro nyc 2015</a></blockquote>
+
+<script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
 <p>(<span class="caps">FYI</span> If you want to look through all the tweets from the entire event, check out this <a href="https://storify.com/yangbodu/codeneuro">Storify</a>&nbsp;board.)</p>
 <p>The conference kicked off with some mingling and beer. I gravitated towards the three I knew people coming in to the conference, <a href="http://www.janelia.org/people/scientist/nick-sofroniew">Nick
 Sofroniew</a>, with whom
@@ -89,7 +92,6 @@ people doing super interesting things in&nbsp;neuroscience.</p>
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>[photo collage/click through? of photos, mine plus curated from twitter from the&nbsp;event]</p>
 <p>We got started with the talks, which we had three 10 minute (ish) talks, followed by a half hour (ish) break. It was a nice format that we could chat and break in between the talks not only to get a mental break but also discuss the concepts presented by the previous talks in the context of neuroscience. Here&#8217;s all the&nbsp;talks:</p>
 <ol>
 <li>Adam Packer (<span class="caps">UCL</span>): All optical recording and manipulation of individual&nbsp;neurons</li>
@@ -177,8 +179,9 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+<p>Then, people split up about 50/50 for the tutorials and the&nbsp;hackathon.</p>
 <h3><code>gitgoing</code> tutorial</h3>
-<p>Then, Ben Sussman and I taught a tutorial called <a href="https://github.com/CodeNeuro/gitgoing">gitgoing</a> to quickly teach scientists the version control system <a href="http://en.wikipedia.org/wiki/Git_%28software%29"><code>git</code></a> and code testing via <a href="http://pytest.org/"><code>py.test</code></a> and integration systems via <a href="https://travis-ci.org/">Travis-<span class="caps">CI</span></a>. The goal was to get the scientists acquainted with common tools in open source software so that they could contribute themselves. It was kind of like a mini <a href="http://software-carpentry.org/">Software Carpentry</a> workshop, but we assumed our target audience had some coding experience, and we didn&#8217;t take the time to explain computer science fundamentals like variables, loops, flow control,&nbsp;etc.</p>
+<p>Then, Ben Sussman and I taught a tutorial called <a href="https://github.com/CodeNeuro/gitgoing">gitgoing</a> to quickly teach scientists the version control system <a href="http://en.wikipedia.org/wiki/Git_%28software%29"><code>git</code></a> and code testing via <a href="http://pytest.org/"><code>py.test</code></a> and integration systems via <a href="https://travis-ci.org/">Travis-<span class="caps">CI</span></a>. We had about 20-30 attendees. The goal was to get the scientists acquainted with common tools in open source software so that they could contribute themselves. It was kind of like a mini <a href="http://software-carpentry.org/">Software Carpentry</a> workshop, but we assumed our target audience had some coding experience, and we didn&#8217;t take the time to explain computer science fundamentals like variables, loops, flow control,&nbsp;etc.</p>
 <p>Our class was structured exactly as laid out in the <code>README.md</code> file. First we setup their computers so they had <code>git</code> and Python 2.7. This took about an hour total to get everyone done. Some people finished faster and started moving on to the <code>git</code> section. Then Ben did an awesome explanation of <code>git</code>, and I learned a bunch of stuff! I didn&#8217;t realize that when you <code>git clone</code> a repo, you&#8217;re getting <span class="caps">ENTIRE</span> history of the project, so that makes sense why downloading all of <a href="ipython.org">IPython</a>/<a href="https://jupyter.org/">Jupyter</a> takes forever. It was also a really helpful analogy to describe the entire repository as an &#8220;ocean of code,&#8221; and that a branch is a single window into that ocean. We also talked about merge conflicts, and how they can be really easy to create if, say someone renamed one of the arguments of a function, and someone else added an argument, and then <code>git</code> doesn&#8217;t know what to do anymore. They picked up on testing pretty quickly, and someone asked &#8220;well if <code>git</code> thinks it&#8217;s okay, but how do you know the code will run?&#8221; Which brought us directly to&nbsp;testing!</p>
 <p>Next, I talked about testing and why it&#8217;s important. I wrote some simple Python code with functions like <code>mean_plus_one</code>, <code>std_plus_one</code>, and <code>cv</code> (coefficient of variance). They were just slight variations on the true <a href="http://www.numpy.org/"><code>numpy</code></a> functions so the learners couldn&#8217;t just use the <code>numpy</code> version. We looked at the test file, <code>test_gitgoing.py</code> which used <code>py.test</code><span class="quo">&#8216;</span>s fixtures, which take care of the <code>setUp</code> and <code>tearDown</code> methods that some other testing frameworks have. We saw a simple example of fixtures, which creates a 20x10 matrix of normally distributed random numbers. These could have been set as integers, I just wanted to illustrate how you can create new fixtures from existing&nbsp;ones.</p>
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -211,8 +214,47 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 <li><strong><span class="caps">RDD</span></strong>: Resilient Distributed Dataset. This is the core unit of a spark analysis, where you load in data, and use Spark to indicate that you want it to be&nbsp;parallelized.</li>
 <li><strong><code>sc</code></strong>: &#8220;Spark context.&#8221; This is the object that exists in all the Python library versions with Spark, and is the object that you will be using to create and operate on&nbsp;datasets. </li>
 </ul>
-<p>We used an IPython notebook-style <a href=""><span class="caps">REPL</span></a> </p>
+<p>We used an IPython notebook-style <a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop"><span class="caps">REPL</span></a> interface, which was really nice because we could see the output from our commands right away. We continued with learning how&nbsp;to:</p>
+<ol>
+<li>Read text files and separate lines by&nbsp;tabs</li>
+<li>Filter for the first word of the line to be <code>ERROR</code></li>
+<li>Get all the second words of the error&nbsp;lines</li>
+<li>Find the errors that were caused by <code>"mysql"</code>.</li>
+</ol>
+<p>You can see a summary of my notes&nbsp;here:</p>
+<div class="highlight"><pre>lines = sc.textFile(&quot;/mnt/paco/intro/error_log.txt&quot;) \
+  .map(lambda x: x.split(&quot;\t&quot;))
+errors = lines.filter(lambda x: x[0] == &quot;ERROR&quot;)
+messages = errors.map(lambda x: x[1])
+messages.filter(lambda x: x.find(&quot;mysql&quot;) &gt; -1).count()
+
+# At this point, the data is loaded into memory on the workers and you don&#39;t
+# need to attack disk again, so this operation is very fast
+messages.filter(lambda x: x.find(&quot;php&quot;) &gt; -1).count()
+</pre></div>
+
+
+<p>Yay, we learned how to read files! Always good&nbsp;:)</p>
+<p>The next part of the tutorial, we learned how to use <code>flatMap</code>, and then how to <code>join</code> several RDDs on their <code>(key, value)</code> pairs. After the break, we had a mini lecture about &#8220;Computational thinking&#8221; where we had to use what we learned so far to find all the instances of the word &#8220;Spark&#8221; in two files. If you&#8217;re interested, you can see my full notes <a href="https://gist.github.com/olgabot/ab058876b3bda6198f25">here</a>.</p>
 <h3>Hackathon</h3>
+<p>The hackathon was centered around the <a href="http://codeneuro.org/neurofinder/">neurofinder</a> challenge, which is to try and extract neuronal signals from Calcium imaging data. The goals were&nbsp;go:</p>
+<ol>
+<li>Refine a standardized <span class="caps">API</span> for &#8220;source extraction&#8221; algorithms, including input/ouptu&nbsp;formats</li>
+<li>Work on evaluation metrics for algorithms and agree on ground truth&nbsp;definition</li>
+<li>Work on incorporating existing algorithms into this <span class="caps">API</span></li>
+<li>Work on front end/back end of a website that would automatically run submitted algorithms on the test data, get the results and upload them to a&nbsp;leaderboard</li>
+</ol>
+<p>First, everyone introduced themselves and the group organically split into a few groups: the website, <span class="caps">API</span> input/output formatting, implementing algorithms, and designing&nbsp;metrics.</p>
+<p>The website team was composed of five people who had web development frontend/backend experience went to work on the website. They generated some prototype websites and code <strong>Jeremy/Nick: is there a link for the code&nbsp;here??</strong></p>
+<p>Another group of about 25 worked on the <span class="caps">API</span> and the input/output formats, with their final notes added to <a href="https://github.com/CodeNeuro/neurofinder/wiki">this wiki</a>.</p>
+<p>Another group of 10-20 split to work on incorporating existing algorithms in to this <span class="caps">API</span>. The rest worked on defining evaluation metrics for algorithms and the &#8220;ground truth&#8221; definitions of &#8220;what is a neuron&#8221; for these methods. They implemented some evaluation metrics, and developed an initial ground truth definition of manual centers an morphological boundaries. While this initial &#8220;ground truth&#8221; may be circular, it&#8217;s a great&nbsp;start.</p>
+<p>There were still people working well into the&nbsp;evening!</p>
+<blockquote class="twitter-tweet" lang="en"><p>the codeneuro hardcore, still rocking! <a href="http://t.co/TyxmlSNOZB">pic.twitter.com/TyxmlSNOZB</a></p>&mdash; CodeNeuro (@CodeNeuro) <a href="https://twitter.com/CodeNeuro/status/587072775057231872">April 12, 2015</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Afterwards, we all hung out at a nice&nbsp;dinner:</p>
+<p><img alt="CodeNeuro after-dinner party" src="http://i.imgur.com/KY9smQR.jpg" /></p>
 <h2>Acknowledgements</h2>
 <p>Finally, I want to acknowledge all the organizers of the&nbsp;event:</p>
 <ul>
@@ -223,7 +265,6 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 <li><a href="https://twitter.com/dgangul1">Deep&nbsp;Ganguli</a></li>
 <li><a href="https://twitter.com/hackingdata">Jeff&nbsp;Hammerbacher</a></li>
 </ul>
-<p>[Photo of everyone from&nbsp;dinner]</p>
             <a href="#" class="go-top">Go Top</a>
     <div class="comments">
         <div id="disqus_thread"></div>
