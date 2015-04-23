@@ -118,7 +118,7 @@ reproducible bioinformatics pipelines. Check out the tweet below for a&nbsp;scre
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p><strong>Optogenetics</strong>. This was a really interesting talk which uses <a href="http://en.wikipedia.org/wiki/Optogenetics">optogenetics</a>, which is a way that you can control the brain with light. Researchers genetically insert <a href="http://en.wikipedia.org/wiki/Rhodopsin">rhodopsin</a>, which is the light-sensitive protein that makes our eyes work, into neurons, which then makes them light sensitive. As a result, you can then turn specific neurons on and off with light! This talk used both this tool of optogenetics to stimulate/inhibit specific neurons, and calcium imaging to record their&nbsp;responses. </p>
+<p><strong>Optogenetics</strong>. This was a really interesting talk about <a href="http://en.wikipedia.org/wiki/Optogenetics">optogenetics</a>, which is a way that you can control the brain with light. Researchers genetically insert <a href="http://en.wikipedia.org/wiki/Rhodopsin">rhodopsin</a>, which is the light-sensitive protein that makes our eyes work, into neurons, which then makes them light sensitive. As a result, you can then turn specific neurons on and off with light! This talk used both this tool of optogenetics to stimulate/inhibit specific neurons, and calcium imaging to record their&nbsp;responses. </p>
 <blockquote class="twitter-tweet" lang="en"><p>A. Packer shows some amazing tools to simultaneously record + stimulate ensembles of neurons with <a href="https://twitter.com/hashtag/CaImaging?src=hash">#CaImaging</a> and <a href="https://twitter.com/hashtag/optogenetics?src=hash">#optogenetics</a>. <a href="https://twitter.com/hashtag/codeneuro?src=hash">#codeneuro</a></p>&mdash; Felipe Gerhard (@neuroflips) <a href="https://twitter.com/neuroflips/status/586685623068717056">April 11, 2015</a></blockquote>
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -180,7 +180,7 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 
 <p>Then, people split up about 50/50 for the tutorials and the&nbsp;hackathon.</p>
 <h3><code>gitgoing</code> tutorial</h3>
-<p>Then, Ben Sussman and I taught a tutorial called
+<p>Ben Sussman and I taught a tutorial called
 <a href="https://github.com/CodeNeuro/gitgoing">gitgoing</a> to quickly teach scientists
 the version control system
 <a href="http://en.wikipedia.org/wiki/Git_%28software%29"><code>git</code></a> and code testing via
@@ -202,7 +202,7 @@ code,&#8221; and that a branch is a single window into that ocean. We also talke
 about merge conflicts, and how they can be really easy to create if, say someone
 renamed one of the arguments of a function, and someone else added an argument,
 and then <code>git</code> doesn&#8217;t know what to do anymore. They picked up on testing pretty
-quickly, and someone asked &#8220;well if <code>git</code> thinks it&#8217;s okay, but how do you know
+quickly, and someone asked &#8220;well <code>git</code> thinks it&#8217;s okay, but how do you know
 the code will run?&#8221; Which brought us directly to&nbsp;testing!</p>
 <p>Next, I talked about testing and why it&#8217;s important. I wrote some simple Python
 code with functions like <code>mean_plus_one</code>, <code>std_plus_one</code>, and <code>cv</code> (coefficient
@@ -269,15 +269,15 @@ fixtures from existing&nbsp;ones.</p>
 <h3>Hackathon</h3>
 <p>The hackathon was centered around the <a href="http://codeneuro.org/neurofinder/">neurofinder</a> challenge, which is to try and extract neuronal signals from Calcium imaging data. The goals were&nbsp;go:</p>
 <ol>
-<li>Refine a standardized <span class="caps">API</span> for &#8220;source extraction&#8221; algorithms, including input/ouptu&nbsp;formats</li>
+<li>Refine a standardized <span class="caps">API</span> for &#8220;source extraction&#8221; algorithms, including input/ouptut&nbsp;formats</li>
 <li>Work on evaluation metrics for algorithms and agree on ground truth&nbsp;definition</li>
 <li>Work on incorporating existing algorithms into this <span class="caps">API</span></li>
-<li>Work on front end/back end of a website that would automatically run submitted algorithms on the test data, get the results and upload them to a&nbsp;leaderboard</li>
+<li>Work on the frontend/backend of a website that would automatically run submitted algorithms on the test data, get the results and upload them to a&nbsp;leaderboard</li>
 </ol>
 <p>First, everyone introduced themselves and the group organically split into a few groups: the website, <span class="caps">API</span> input/output formatting, implementing algorithms, and designing&nbsp;metrics.</p>
-<p>The website team was composed of five people who had web development frontend/backend experience went to work on the website. They generated some prototype websites and code <strong>Jeremy/Nick: is there a link for the code&nbsp;here??</strong></p>
+<p>The website team was composed of five people with web development frontend/backend experience. They generated some prototype websites and code, all available on <a href="https://github.com/codeneuro/neurofinder">github</a>, and hopefully launching in beta&nbsp;soon!</p>
 <p>Another group of about 25 worked on the <span class="caps">API</span> and the input/output formats, with their final notes added to <a href="https://github.com/CodeNeuro/neurofinder/wiki">this wiki</a>.</p>
-<p>Another group of 10-20 split to work on incorporating existing algorithms in to this <span class="caps">API</span>. The rest worked on defining evaluation metrics for algorithms and the &#8220;ground truth&#8221; definitions of &#8220;what is a neuron&#8221; for these methods. They implemented some evaluation metrics, and developed an initial ground truth definition of manual centers an morphological boundaries. While this initial &#8220;ground truth&#8221; may be circular, it&#8217;s a great&nbsp;start.</p>
+<p>Another group of 10-20 split to work on incorporating existing algorithms in to this <span class="caps">API</span>. The rest worked on defining evaluation metrics for algorithms and the &#8220;ground truth&#8221; definitions of &#8220;what is a neuron&#8221; for these methods. They implemented some evaluation metrics, and developed an initial ground truth definition of manual centers and morphological boundaries. They discussed that this initial &#8220;ground truth&#8221; risks circularity, but is still a solid&nbsp;start.</p>
 <p>There were still people working well into the&nbsp;evening!</p>
 <blockquote class="twitter-tweet" lang="en"><p>the codeneuro hardcore, still rocking! <a href="http://t.co/TyxmlSNOZB">pic.twitter.com/TyxmlSNOZB</a></p>&mdash; CodeNeuro (@CodeNeuro) <a href="https://twitter.com/CodeNeuro/status/587072775057231872">April 12, 2015</a></blockquote>
 
@@ -288,9 +288,10 @@ fixtures from existing&nbsp;ones.</p>
 <h2>Acknowledgements</h2>
 <p>Finally, I want to acknowledge all the organizers of the&nbsp;event:</p>
 <ul>
-<li>Jeremy&nbsp;Freeman</li>
-<li>Nick&nbsp;Sofroniew</li>
+<li><a href="http://jeremyfreeman.net">Jeremy&nbsp;Freeman</a></li>
+<li><a href="https://twitter.com/neuro_nick">Nick&nbsp;Sofroniew</a></li>
 <li><a href="http://graphics.stanford.edu/~broxton/">Michael&nbsp;Broxton</a></li>
+<li><a href="http://www.mathisonian.com/">Matt&nbsp;Conlen</a></li>
 <li><a href="http://web.stanford.edu/~logang/">Logan&nbsp;Grosenick</a></li>
 <li><a href="https://twitter.com/dgangul1">Deep&nbsp;Ganguli</a></li>
 <li><a href="https://twitter.com/hackingdata">Jeff&nbsp;Hammerbacher</a></li>

@@ -52,7 +52,7 @@ reproducible bioinformatics pipelines. Check out the tweet below for a&amp;nbsp;
 
 &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
-&lt;p&gt;&lt;strong&gt;Optogenetics&lt;/strong&gt;. This was a really interesting talk which uses &lt;a href="http://en.wikipedia.org/wiki/Optogenetics"&gt;optogenetics&lt;/a&gt;, which is a way that you can control the brain with light. Researchers genetically insert &lt;a href="http://en.wikipedia.org/wiki/Rhodopsin"&gt;rhodopsin&lt;/a&gt;, which is the light-sensitive protein that makes our eyes work, into neurons, which then makes them light sensitive. As a result, you can then turn specific neurons on and off with light! This talk used both this tool of optogenetics to stimulate/inhibit specific neurons, and calcium imaging to record their&amp;nbsp;responses. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Optogenetics&lt;/strong&gt;. This was a really interesting talk about &lt;a href="http://en.wikipedia.org/wiki/Optogenetics"&gt;optogenetics&lt;/a&gt;, which is a way that you can control the brain with light. Researchers genetically insert &lt;a href="http://en.wikipedia.org/wiki/Rhodopsin"&gt;rhodopsin&lt;/a&gt;, which is the light-sensitive protein that makes our eyes work, into neurons, which then makes them light sensitive. As a result, you can then turn specific neurons on and off with light! This talk used both this tool of optogenetics to stimulate/inhibit specific neurons, and calcium imaging to record their&amp;nbsp;responses. &lt;/p&gt;
 &lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;A. Packer shows some amazing tools to simultaneously record + stimulate ensembles of neurons with &lt;a href="https://twitter.com/hashtag/CaImaging?src=hash"&gt;#CaImaging&lt;/a&gt; and &lt;a href="https://twitter.com/hashtag/optogenetics?src=hash"&gt;#optogenetics&lt;/a&gt;. &lt;a href="https://twitter.com/hashtag/codeneuro?src=hash"&gt;#codeneuro&lt;/a&gt;&lt;/p&gt;&amp;mdash; Felipe Gerhard (@neuroflips) &lt;a href="https://twitter.com/neuroflips/status/586685623068717056"&gt;April 11, 2015&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
@@ -114,7 +114,7 @@ space, and started off with some kickass bagels and&amp;nbsp;lox/salmon:&lt;/p&g
 
 &lt;p&gt;Then, people split up about 50/50 for the tutorials and the&amp;nbsp;hackathon.&lt;/p&gt;
 &lt;h3&gt;&lt;code&gt;gitgoing&lt;/code&gt; tutorial&lt;/h3&gt;
-&lt;p&gt;Then, Ben Sussman and I taught a tutorial called
+&lt;p&gt;Ben Sussman and I taught a tutorial called
 &lt;a href="https://github.com/CodeNeuro/gitgoing"&gt;gitgoing&lt;/a&gt; to quickly teach scientists
 the version control system
 &lt;a href="http://en.wikipedia.org/wiki/Git_%28software%29"&gt;&lt;code&gt;git&lt;/code&gt;&lt;/a&gt; and code testing via
@@ -136,7 +136,7 @@ code,&amp;#8221; and that a branch is a single window into that ocean. We also t
 about merge conflicts, and how they can be really easy to create if, say someone
 renamed one of the arguments of a function, and someone else added an argument,
 and then &lt;code&gt;git&lt;/code&gt; doesn&amp;#8217;t know what to do anymore. They picked up on testing pretty
-quickly, and someone asked &amp;#8220;well if &lt;code&gt;git&lt;/code&gt; thinks it&amp;#8217;s okay, but how do you know
+quickly, and someone asked &amp;#8220;well &lt;code&gt;git&lt;/code&gt; thinks it&amp;#8217;s okay, but how do you know
 the code will run?&amp;#8221; Which brought us directly to&amp;nbsp;testing!&lt;/p&gt;
 &lt;p&gt;Next, I talked about testing and why it&amp;#8217;s important. I wrote some simple Python
 code with functions like &lt;code&gt;mean_plus_one&lt;/code&gt;, &lt;code&gt;std_plus_one&lt;/code&gt;, and &lt;code&gt;cv&lt;/code&gt; (coefficient
@@ -203,15 +203,15 @@ fixtures from existing&amp;nbsp;ones.&lt;/p&gt;
 &lt;h3&gt;Hackathon&lt;/h3&gt;
 &lt;p&gt;The hackathon was centered around the &lt;a href="http://codeneuro.org/neurofinder/"&gt;neurofinder&lt;/a&gt; challenge, which is to try and extract neuronal signals from Calcium imaging data. The goals were&amp;nbsp;go:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Refine a standardized &lt;span class="caps"&gt;API&lt;/span&gt; for &amp;#8220;source extraction&amp;#8221; algorithms, including input/ouptu&amp;nbsp;formats&lt;/li&gt;
+&lt;li&gt;Refine a standardized &lt;span class="caps"&gt;API&lt;/span&gt; for &amp;#8220;source extraction&amp;#8221; algorithms, including input/ouptut&amp;nbsp;formats&lt;/li&gt;
 &lt;li&gt;Work on evaluation metrics for algorithms and agree on ground truth&amp;nbsp;definition&lt;/li&gt;
 &lt;li&gt;Work on incorporating existing algorithms into this &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Work on front end/back end of a website that would automatically run submitted algorithms on the test data, get the results and upload them to a&amp;nbsp;leaderboard&lt;/li&gt;
+&lt;li&gt;Work on the frontend/backend of a website that would automatically run submitted algorithms on the test data, get the results and upload them to a&amp;nbsp;leaderboard&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;First, everyone introduced themselves and the group organically split into a few groups: the website, &lt;span class="caps"&gt;API&lt;/span&gt; input/output formatting, implementing algorithms, and designing&amp;nbsp;metrics.&lt;/p&gt;
-&lt;p&gt;The website team was composed of five people who had web development frontend/backend experience went to work on the website. They generated some prototype websites and code &lt;strong&gt;Jeremy/Nick: is there a link for the code&amp;nbsp;here??&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The website team was composed of five people with web development frontend/backend experience. They generated some prototype websites and code, all available on &lt;a href="https://github.com/codeneuro/neurofinder"&gt;github&lt;/a&gt;, and hopefully launching in beta&amp;nbsp;soon!&lt;/p&gt;
 &lt;p&gt;Another group of about 25 worked on the &lt;span class="caps"&gt;API&lt;/span&gt; and the input/output formats, with their final notes added to &lt;a href="https://github.com/CodeNeuro/neurofinder/wiki"&gt;this wiki&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Another group of 10-20 split to work on incorporating existing algorithms in to this &lt;span class="caps"&gt;API&lt;/span&gt;. The rest worked on defining evaluation metrics for algorithms and the &amp;#8220;ground truth&amp;#8221; definitions of &amp;#8220;what is a neuron&amp;#8221; for these methods. They implemented some evaluation metrics, and developed an initial ground truth definition of manual centers an morphological boundaries. While this initial &amp;#8220;ground truth&amp;#8221; may be circular, it&amp;#8217;s a great&amp;nbsp;start.&lt;/p&gt;
+&lt;p&gt;Another group of 10-20 split to work on incorporating existing algorithms in to this &lt;span class="caps"&gt;API&lt;/span&gt;. The rest worked on defining evaluation metrics for algorithms and the &amp;#8220;ground truth&amp;#8221; definitions of &amp;#8220;what is a neuron&amp;#8221; for these methods. They implemented some evaluation metrics, and developed an initial ground truth definition of manual centers and morphological boundaries. They discussed that this initial &amp;#8220;ground truth&amp;#8221; risks circularity, but is still a solid&amp;nbsp;start.&lt;/p&gt;
 &lt;p&gt;There were still people working well into the&amp;nbsp;evening!&lt;/p&gt;
 &lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;the codeneuro hardcore, still rocking! &lt;a href="http://t.co/TyxmlSNOZB"&gt;pic.twitter.com/TyxmlSNOZB&lt;/a&gt;&lt;/p&gt;&amp;mdash; CodeNeuro (@CodeNeuro) &lt;a href="https://twitter.com/CodeNeuro/status/587072775057231872"&gt;April 12, 2015&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -222,9 +222,10 @@ fixtures from existing&amp;nbsp;ones.&lt;/p&gt;
 &lt;h2&gt;Acknowledgements&lt;/h2&gt;
 &lt;p&gt;Finally, I want to acknowledge all the organizers of the&amp;nbsp;event:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Jeremy&amp;nbsp;Freeman&lt;/li&gt;
-&lt;li&gt;Nick&amp;nbsp;Sofroniew&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://jeremyfreeman.net"&gt;Jeremy&amp;nbsp;Freeman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/neuro_nick"&gt;Nick&amp;nbsp;Sofroniew&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://graphics.stanford.edu/~broxton/"&gt;Michael&amp;nbsp;Broxton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.mathisonian.com/"&gt;Matt&amp;nbsp;Conlen&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://web.stanford.edu/~logang/"&gt;Logan&amp;nbsp;Grosenick&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/dgangul1"&gt;Deep&amp;nbsp;Ganguli&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/hackingdata"&gt;Jeff&amp;nbsp;Hammerbacher&lt;/a&gt;&lt;/li&gt;
