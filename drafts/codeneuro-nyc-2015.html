@@ -180,9 +180,40 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 
 <p>Then, people split up about 50/50 for the tutorials and the&nbsp;hackathon.</p>
 <h3><code>gitgoing</code> tutorial</h3>
-<p>Then, Ben Sussman and I taught a tutorial called <a href="https://github.com/CodeNeuro/gitgoing">gitgoing</a> to quickly teach scientists the version control system <a href="http://en.wikipedia.org/wiki/Git_%28software%29"><code>git</code></a> and code testing via <a href="http://pytest.org/"><code>py.test</code></a> and integration systems via <a href="https://travis-ci.org/">Travis-<span class="caps">CI</span></a>. We had about 20-30 attendees. The goal was to get the scientists acquainted with common tools in open source software so that they could contribute themselves. It was kind of like a mini <a href="http://software-carpentry.org/">Software Carpentry</a> workshop, but we assumed our target audience had some coding experience, and we didn&#8217;t take the time to explain computer science fundamentals like variables, loops, flow control,&nbsp;etc.</p>
-<p>Our class was structured exactly as laid out in the <code>README.md</code> file. First we setup their computers so they had <code>git</code> and Python 2.7. This took about an hour total to get everyone done. Some people finished faster and started moving on to the <code>git</code> section. Then Ben did an awesome explanation of <code>git</code>, and I learned a bunch of stuff! I didn&#8217;t realize that when you <code>git clone</code> a repo, you&#8217;re getting <span class="caps">ENTIRE</span> history of the project, so that makes sense why downloading all of <a href="ipython.org">IPython</a>/<a href="https://jupyter.org/">Jupyter</a> takes forever. It was also a really helpful analogy to describe the entire repository as an &#8220;ocean of code,&#8221; and that a branch is a single window into that ocean. We also talked about merge conflicts, and how they can be really easy to create if, say someone renamed one of the arguments of a function, and someone else added an argument, and then <code>git</code> doesn&#8217;t know what to do anymore. They picked up on testing pretty quickly, and someone asked &#8220;well if <code>git</code> thinks it&#8217;s okay, but how do you know the code will run?&#8221; Which brought us directly to&nbsp;testing!</p>
-<p>Next, I talked about testing and why it&#8217;s important. I wrote some simple Python code with functions like <code>mean_plus_one</code>, <code>std_plus_one</code>, and <code>cv</code> (coefficient of variance). They were just slight variations on the true <a href="http://www.numpy.org/"><code>numpy</code></a> functions so the learners couldn&#8217;t just use the <code>numpy</code> version. We looked at the test file, <code>test_gitgoing.py</code> which used <code>py.test</code><span class="quo">&#8216;</span>s fixtures, which take care of the <code>setUp</code> and <code>tearDown</code> methods that some other testing frameworks have. We saw a simple example of fixtures, which creates a 20x10 matrix of normally distributed random numbers. These could have been set as integers, I just wanted to illustrate how you can create new fixtures from existing&nbsp;ones.</p>
+<p>Then, Ben Sussman and I taught a tutorial called
+<a href="https://github.com/CodeNeuro/gitgoing">gitgoing</a> to quickly teach scientists
+the version control system
+<a href="http://en.wikipedia.org/wiki/Git_%28software%29"><code>git</code></a> and code testing via
+<a href="http://pytest.org/"><code>py.test</code></a> and integration systems via <a href="https://travis-ci.org/">Travis-<span class="caps">CI</span></a>. We had about 20-30 attendees. The goal was to get the
+scientists acquainted with common tools in open source software so that they
+could contribute themselves. It was kind of like a mini <a href="http://software-carpentry.org/">Software
+Carpentry</a> workshop, but we assumed our target
+audience had some coding experience, and we didn&#8217;t take the time to explain
+computer science fundamentals like variables, loops, flow control,&nbsp;etc.</p>
+<p>Our class was structured exactly as laid out in the <code>README.md</code> file. First we
+setup their computers so they had <code>git</code> and Python 2.7. This took about an hour
+total to get everyone done. Some people finished faster and started moving on to
+the <code>git</code> section. Then Ben did an awesome explanation of <code>git</code>, and I learned a
+bunch of stuff! I didn&#8217;t realize that when you <code>git clone</code> a repo, you&#8217;re
+getting <span class="caps">ENTIRE</span> history of the project, so that makes sense why downloading all
+of <a href="ipython.org">IPython</a>/<a href="https://jupyter.org/">Jupyter</a> takes forever. It was
+also a really helpful analogy to describe the entire repository as an &#8220;ocean of
+code,&#8221; and that a branch is a single window into that ocean. We also talked
+about merge conflicts, and how they can be really easy to create if, say someone
+renamed one of the arguments of a function, and someone else added an argument,
+and then <code>git</code> doesn&#8217;t know what to do anymore. They picked up on testing pretty
+quickly, and someone asked &#8220;well if <code>git</code> thinks it&#8217;s okay, but how do you know
+the code will run?&#8221; Which brought us directly to&nbsp;testing!</p>
+<p>Next, I talked about testing and why it&#8217;s important. I wrote some simple Python
+code with functions like <code>mean_plus_one</code>, <code>std_plus_one</code>, and <code>cv</code> (coefficient
+of variance). They were just slight variations on the true
+<a href="http://www.numpy.org/"><code>numpy</code></a> functions so the learners couldn&#8217;t just use the
+<code>numpy</code> version. We looked at the test file, <code>test_gitgoing.py</code> which used
+<code>py.test</code><span class="quo">&#8216;</span>s fixtures, which take care of the <code>setUp</code> and <code>tearDown</code> methods that
+some other testing frameworks have. We saw a simple example of fixtures, which
+creates a 20x10 matrix of normally distributed random numbers. These could have
+been set as integers, I just wanted to illustrate how you can create new
+fixtures from existing&nbsp;ones.</p>
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pytest</span>
 
@@ -207,7 +238,7 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <h3>Spark&nbsp;tutorial</h3>
-<p>After the <code>gitgoing</code> tutorial we had a break and mingled. Then, I went to the Spark tutorial, taught by <a href="">Paco Nathan</a> from <a href="">DataBricks</a> (slides <a href="http://training.databricks.com/workshop/dbc_intro.pdf">here</a>). I&#8217;ve seen Spark demos before but I haven&#8217;t put in the time to play around with the tools, so this was a great way to get&nbsp;exposed!</p>
+<p>After the <code>gitgoing</code> tutorial we had a break and mingled. Then, I went to the Spark tutorial, taught by <a href="http://liber118.com/pxn/">Paco Nathan</a> from <a href="https://databricks.com/">DataBricks</a> (slides <a href="http://training.databricks.com/workshop/dbc_intro.pdf">here</a>). I&#8217;ve seen Spark demos before but I haven&#8217;t put in the time to play around with the tools, so this was a great way to get&nbsp;exposed!</p>
 <p>I was a little late to the tutorial, so I missed the initial setup. I was handed a slip of paper with a url, username and password that was my personal login to the DataBricks cloud. Paco was doing a &#8220;preflight check&#8221; of explaining different Spark concepts before we dove in. The key things I took away&nbsp;were:</p>
 <ul>
 <li><strong><span class="caps">RDD</span></strong>: Resilient Distributed Dataset. This is the core unit of a spark analysis, where you load in data, and use Spark to indicate that you want it to be&nbsp;parallelized.</li>
