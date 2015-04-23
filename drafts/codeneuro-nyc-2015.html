@@ -220,16 +220,16 @@ space, and started off with some kickass bagels and&nbsp;lox/salmon:</p>
 <li>Get all the second words of the error&nbsp;lines</li>
 <li>Find the errors that were caused by <code>"mysql"</code>.</li>
 </ol>
-<p>You can see a summary of my notes&nbsp;here:</p>
-<div class="highlight"><pre>lines = sc.textFile(&quot;/mnt/paco/intro/error_log.txt&quot;) \
-  .map(lambda x: x.split(&quot;\t&quot;))
-errors = lines.filter(lambda x: x[0] == &quot;ERROR&quot;)
-messages = errors.map(lambda x: x[1])
-messages.filter(lambda x: x.find(&quot;mysql&quot;) &gt; -1).count()
+<p>You can see a summary of my notes for this first section&nbsp;here:</p>
+<div class="highlight"><pre><span class="n">lines</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="p">(</span><span class="s">&quot;/mnt/paco/intro/error_log.txt&quot;</span><span class="p">)</span> \
+  <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">))</span>
+<span class="n">errors</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;ERROR&quot;</span><span class="p">)</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="n">errors</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">messages</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;mysql&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 
-# At this point, the data is loaded into memory on the workers and you don&#39;t
-# need to attack disk again, so this operation is very fast
-messages.filter(lambda x: x.find(&quot;php&quot;) &gt; -1).count()
+<span class="c"># At this point, the data is loaded into memory on the workers and you don&#39;t</span>
+<span class="c"># need to attack disk again, so this operation is very fast</span>
+<span class="n">messages</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;php&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 </pre></div>
 
 
