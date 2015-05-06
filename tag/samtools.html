@@ -8,11 +8,11 @@
         <link rel="alternate"  href="/feeds/all.atom.rss.xml" type="application/atom+xml" title="Science, meet productivity Full Atom Feed"/>
         <link rel="alternate" href="/feeds/all.rss.xml" type="application/rss+xml" title="Science, meet productivity Full RSS Feed"/>
 
-        <title>Science, meet productivity - Authors</title>
+        <title>samtools tag // Science, meet productivity // A computational RNA biologist exploring productivity, python, and reproducibility.</title>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./theme/css/pure.css">
+    <link rel="stylesheet" href="../theme/css/pure.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
@@ -27,8 +27,8 @@
                             <img class="avatar" src="http://raw.githubusercontent.com/olgabot/olgabot.github.io-source/master/content/images/olga_icon_square.jpg">
                             <h1 class="brand-main"><a href="/">Science, meet productivity</a></h1>
                             <p class="tagline">A computational RNA biologist exploring productivity, python, and reproducibility.</p>
-                                <p class="links"><a href="./archives.html">Archive</a></p>
-                                <p class="links"><a href="./pages/about.html">About</a></p>
+                                <p class="links"><a href="../archives.html">Archive</a></p>
+                                <p class="links"><a href="../pages/about.html">About</a></p>
                                 <p class="social">
                                     <a href="http://github.com/olgabot">
                                         <i class="fa fa-github-square fa-3x"></i>
@@ -45,11 +45,38 @@
                 </div>
             </div>
         </div>
-    <h1>Authors on Science, meet productivity</h1>
-
-    <ul>        <li><a href="./author/olga-botvinnik.html">Olga Botvinnik</a> (9)</li>
-        <li><a href="./author/sciencemeetproductivity.html">sciencemeetproductivity</a> (31)</li>
-    </ul>
+    <div class="pure-u">
+        <div class="content">
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">
+Posts tagged 'samtools'                </h1>
+                    <section class="post">
+                        <header class="post-header">
+                            <h3><a class="post-title" href="../blog/2015/05/06/igv-java-lang-nullpointerexception/"><span class="caps">IGV</span>: Null pointer exceptions, invalid <span class="caps">GZIP</span> header, invalid <span class="caps">BZIP</span>&nbsp;header</a></h3>
+                            <p class="post-meta"><p>If you&#8217;ve run into a <code>java.lang.NullPointerException</code> or &#8220;Invalid Gzip Header&#8221; or some complaint about bzip while using the Integrative Genomics Viewer, then you&#8217;ve run into the same problem as me. Turns out I had too many index (<code>*.bai</code>) files that had similar naming to my <code>*.bam</code> files, and <span class="caps">IGV</span> assigned the wrong ones as the index, so whenever I tried to view reads from those samples, the index pointed to the wrong location in the bam, and one of those many errors would happen. So the solution is simple (and relatively fast): use <code>samtools index</code> on your bam&nbsp;files!</p></p>
+                            <p class="post-meta">
+                                in <a href="../category/bioinformatics.html">bioinformatics</a> &middot; Wed 06 May 2015
+                            </p>
+                        </header>
+                    </section>
+<div class="pagination-wrapper content-subhead">
+    <div class="pagination">
+        <div class="pagination-left">
+                &nbsp;
+        </div>
+        <span>Page 1 / 1</span>
+        <div class="pagination-right">
+        </div>
+    </div>
+</div><footer class="footer">
+    <p>&copy; Olga Botvinnik &ndash;
+        Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
+        for <a href="http://blog.getpelican.com/">Pelican</a>
+    </p>
+</footer>            </div>
+        </div>
+    </div>
     </div>
     <script>
         var $top = $('.go-top');

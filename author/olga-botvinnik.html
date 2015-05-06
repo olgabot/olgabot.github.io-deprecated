@@ -53,6 +53,15 @@
 Posts by 'Olga Botvinnik'                </h1>
                     <section class="post">
                         <header class="post-header">
+                            <h3><a class="post-title" href="../blog/2015/05/06/igv-java-lang-nullpointerexception/"><span class="caps">IGV</span>: Null pointer exceptions, invalid <span class="caps">GZIP</span> header, invalid <span class="caps">BZIP</span>&nbsp;header</a></h3>
+                            <p class="post-meta"><p>If you&#8217;ve run into a <code>java.lang.NullPointerException</code> or &#8220;Invalid Gzip Header&#8221; or some complaint about bzip while using the Integrative Genomics Viewer, then you&#8217;ve run into the same problem as me. Turns out I had too many index (<code>*.bai</code>) files that had similar naming to my <code>*.bam</code> files, and <span class="caps">IGV</span> assigned the wrong ones as the index, so whenever I tried to view reads from those samples, the index pointed to the wrong location in the bam, and one of those many errors would happen. So the solution is simple (and relatively fast): use <code>samtools index</code> on your bam&nbsp;files!</p></p>
+                            <p class="post-meta">
+                                in <a href="../category/bioinformatics.html">bioinformatics</a> &middot; Wed 06 May 2015
+                            </p>
+                        </header>
+                    </section>
+                    <section class="post">
+                        <header class="post-header">
                             <h3><a class="post-title" href="../blog/2015/04/12/codeneuro-nyc-2015/">CodeNeuro <span class="caps">NYC</span>&nbsp;2015</a></h3>
                             <p class="post-meta"><p>Last weekend I attended the <a href="http://codeneuro.org/2015/NYC/">CodeNeuro <span class="caps">NYC</span></a> conference, which is a conference for neuroscientists, programmers, and everything in between. It was a unique experience because it had both the excitement and energy of a tech conference, and the pure, unadulterated zest for knowledge of a scientific&nbsp;conference.</p></p>
                             <p class="post-meta">
