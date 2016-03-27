@@ -71,7 +71,7 @@
 <p>While Helvetica is a <a href="http://www.helveticafilm.com/">controversial</a> font, it is  simple, clean, and undisputedly easy to read. In my scientific figures, I&#8217;m not going for originality in the typography, I just want it clean and readable. And, as I use Helvetica in my own documents, I want my plot text and my document text to match, without having to go into Adobe Illustrator and change it&nbsp;all.</p>
 <h2>If you&#8217;ve tried to add Helvetica by editing your <code>.matplotlibrc</code> file</h2>
 <p>You&#8217;ve probably seen this&nbsp;error:</p>
-<div class="highlight"><pre>/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/font_manager.py:1216: UserWarning: findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to Bitstream Vera Sans
+<div class="highlight"><pre><span></span>/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/font_manager.py:1216: UserWarning: findfont: Font family [&#39;sans-serif&#39;] not found. Falling back to Bitstream Vera Sans
 </pre></div>
 
 
@@ -81,41 +81,41 @@
 <p><span class="caps">EDIT</span>: changed source <code>.tgz</code> install to homebrew&nbsp;install.</p>
 <p>To install <em>Fondu</em>, use <a href="http://mxcl.github.io/homebrew/"><code>homebrew</code></a>, the &#8220;missing package manager for <span class="caps">OSX</span>.&#8221; It&#8217;s really fantastic, downloading and installing dependencies automagically for each&nbsp;package.</p>
 <p>After you install <code>homebrew</code>, the command  to install <em>Fondu</em>&nbsp;is,</p>
-<div class="highlight"><pre>brew install fondu
+<div class="highlight"><pre><span></span>brew install fondu
 </pre></div>
 
 
 <p>You may need to <code>brew update</code> if you are getting an&nbsp;error.</p>
 <h3>2. Find Helvetica on your&nbsp;system</h3>
 <p>Can use &#8216;FontBook.app&#8217; to find where Helvetica is on your system, but in all likelihood it&#8217;s&nbsp;here:</p>
-<div class="highlight"><pre>/System/Library/Fonts/Helvetica.dfont
+<div class="highlight"><pre><span></span>/System/Library/Fonts/Helvetica.dfont
 </pre></div>
 
 
 <p>Need to convert this font file to <code>.ttf</code> via <em>Fondu</em>.</p>
 <h3>3. Find where matplotlib stores its&nbsp;data</h3>
 <p>To find out where matplotlib stores its data, we use this command. Note that these outputs are specific to my machine and Python&nbsp;installation.</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">python</span>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">python</span>
 <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="p">;</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">matplotlib_fname</span><span class="p">()</span>
 <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">EPD64</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">7.3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">mpl</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">matplotlibrc</span>
 </pre></div>
 
 
 <p>We need to put the <code>.ttf</code> in: <code>matplotlib/mpl-data/fonts/ttf</code></p>
-<div class="highlight"><pre><span class="nv">$ </span><span class="nb">cd</span> /Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/
-<span class="nv">$ </span>sudo fondu -show /System/Library/Fonts/Helvetica.dfont  <span class="c"># need sudo access to get into the .dfont directory</span>
+<div class="highlight"><pre><span></span>$ <span class="nb">cd</span> /Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/
+$ sudo fondu -show /System/Library/Fonts/Helvetica.dfont  <span class="c1"># need sudo access to get into the .dfont directory</span>
 </pre></div>
 
 
 <p>If this is not your own machine, copy the Helvetica file to somewhere you can edit, and then run&nbsp;fondu:</p>
-<div class="highlight"><pre><span class="nv">$ </span>mkdir ~/font_copies <span class="p">;</span>cp /System/Library/Fonts/Helvetica.dfont ~/font_copies
-<span class="nv">$ </span><span class="nb">cd</span> /Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/
-<span class="nv">$ </span>sudo fondu -show ~/font_copies/Helvetica.dfont
+<div class="highlight"><pre><span></span>$ mkdir ~/font_copies <span class="p">;</span>cp /System/Library/Fonts/Helvetica.dfont ~/font_copies
+$ <span class="nb">cd</span> /Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/
+$ sudo fondu -show ~/font_copies/Helvetica.dfont
 </pre></div>
 
 
 <p>Because we specified <code>-show</code>, which in this program is the equivalent of <code>--verbose</code>, we see all the files that are created. I don&#8217;t know why there&#8217;s a bunch of &#8220;Untitled&#8221; files but we&#8217;ll just leave them there. Now you should have a bunch of <code>Helvetica*.ttf</code> files in this directory. Let&#8217;s&nbsp;double-check:</p>
-<div class="highlight"><pre><span class="nv">$ </span>ls -1 Helvetica*   <span class="c"># The &#39;-1&#39; argument forces the output to be a single column</span>
+<div class="highlight"><pre><span></span>$ ls -1 Helvetica*   <span class="c1"># The &#39;-1&#39; argument forces the output to be a single column</span>
 Helvetica.ttf
 HelveticaBold.ttf
 HelveticaBoldOblique.ttf
@@ -128,37 +128,37 @@ HelveticaOblique.ttf
 <p><span class="caps">BUT</span> <span class="caps">WAIT</span>. Before you can go on happily using Helvetica, you need to set Helvetica as the default font in your <code>.matplotlibrc</code> file. Remember we found the location of your <code>matplotlibrc</code> file using <code>matplotlib.matplotlib_fname()</code> ?</p>
 <h3>4. Edit your <code>.matplotlibrc</code> file</h3>
 <p>The <a href="http://matplotlib.org/users/customizing.html"><code>matplotlibrc</code></a> file gets read in every time you import matplotlib, and this is where you can set customizations such as default fonts and colors. Since we&#8217;re good computer scientists, we&#8217;re going to copy the original <code>.matplotlibrc</code> file into a personal directory so it doesn&#8217;t get over written when we update <code>matplotlib</code>.</p>
-<div class="highlight"><pre><span class="nv">$ </span>cp /Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc ~/.matplotlib/matplotlibrc
+<div class="highlight"><pre><span></span>$ cp /Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/mpl-data/matplotlibrc ~/.matplotlib/matplotlibrc
 </pre></div>
 
 
 <p>Now use your terminal-based editor of choice (mine is <a href="www.gnu.org/s/emacs/">Emacs</a>) to edit the&nbsp;file:</p>
-<div class="highlight"><pre><span class="nv">$ </span>emacs -q ~/.matplotlib/matplotlibrc  <span class="c"># the &#39;-q&#39; doesn&#39;t load my .emacs file which has settings that aren&#39;t compatible with my terminal</span>
+<div class="highlight"><pre><span></span>$ emacs -q ~/.matplotlib/matplotlibrc  <span class="c1"># the &#39;-q&#39; doesn&#39;t load my .emacs file which has settings that aren&#39;t compatible with my terminal</span>
 </pre></div>
 
 
 <p>Find the&nbsp;line:</p>
-<div class="highlight"><pre>#font.sans-serif     : Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+<div class="highlight"><pre><span></span>#font.sans-serif     : Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
 </pre></div>
 
 
 <p>This list of fonts is ordered in decreasing priority, meaning that Bitstream Vera Sans is used first, but if it&#8217;s not there, use Lucida Grande, if that&#8217;s not there, use Verdana, and so on. We want to uncomment it (remove the <code>#</code>), and make Helvetica the first&nbsp;priority:</p>
-<div class="highlight"><pre>font.sans-serif     : Helvetica, Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+<div class="highlight"><pre><span></span>font.sans-serif     : Helvetica, Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
 </pre></div>
 
 
 <p>You can remove Helvetica from the end of the list, but it shouldn&#8217;t matter because the program will stop searching once it finds a font it&nbsp;knows.</p>
 <h3>5. Force matplotlib to re-scan the font lists and add&nbsp;Helvetica</h3>
 <p>Now we need to force matplotlib to re-create the font lists by removing the&nbsp;files.</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">rm</span> <span class="o">~/.</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">fontList</span><span class="o">.</span><span class="n">cache</span> <span class="o">~/.</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">fontManager</span><span class="o">.</span><span class="n">cache</span> <span class="o">~/.</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">ttffont</span><span class="o">.</span><span class="n">cache</span>
-<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">v</span>  <span class="c"># watch all the imports fly by</span>
-<span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>  <span class="c"># this will import and create the *.cache files we just removed</span>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">rm</span> <span class="o">~/.</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">fontList</span><span class="o">.</span><span class="n">cache</span> <span class="o">~/.</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">fontManager</span><span class="o">.</span><span class="n">cache</span> <span class="o">~/.</span><span class="n">matplotlib</span><span class="o">/</span><span class="n">ttffont</span><span class="o">.</span><span class="n">cache</span>
+<span class="err">$</span> <span class="n">python</span> <span class="o">-</span><span class="n">v</span>  <span class="c1"># watch all the imports fly by</span>
+<span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>  <span class="c1"># this will import and create the *.cache files we just removed</span>
 </pre></div>
 
 
 <p>I was stuck at&nbsp;this:</p>
-<div class="highlight"><pre><span class="n">dlopen</span><span class="p">(</span><span class="s">&quot;/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/ft2font.so&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-<span class="kn">import</span> <span class="nn">matplotlib.ft2font</span> <span class="c"># dynamically loaded from /Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/ft2font.so</span>
+<div class="highlight"><pre><span></span><span class="n">dlopen</span><span class="p">(</span><span class="s2">&quot;/Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/ft2font.so&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="kn">import</span> <span class="nn">matplotlib.ft2font</span> <span class="c1"># dynamically loaded from /Library/Frameworks/EPD64.framework/Versions/7.3/lib/python2.7/site-packages/matplotlib/ft2font.so</span>
 </pre></div>
 
 
@@ -169,7 +169,7 @@ HelveticaOblique.ttf
 <h2>What if you want to use something <em>other</em> than&nbsp;Helvetica?</h2>
 <h3>If you have a <code>.ttf</code> file for the&nbsp;font</h3>
 <p>My favorite fixed-width font is <a href="http://nodnod.net/2009/feb/12/adding-straight-single-and-double-quotes-inconsola/">Inconsolata-dz</a> (this fixes the weird quotations of Inconsolata), which I use in all my terminal and code editing programs. If you installed the font before installing <code>matplotlib</code>, you can probably just use it. Let&#8217;s check the fontList file just to make&nbsp;sure:</p>
-<div class="highlight"><pre><span class="nv">$ </span>grep Inconsolata ~/.matplotlib/fontList.cache
+<div class="highlight"><pre><span></span>$ grep Inconsolata ~/.matplotlib/fontList.cache
 S<span class="s1">&#39;Inconsolata&#39;</span>
 S<span class="s1">&#39;/Users/olgabotvinnik/Library/Fonts/Inconsolata.otf&#39;</span>
 S<span class="s1">&#39;Inconsolata-dz&#39;</span>
@@ -180,9 +180,9 @@ aS<span class="s1">&#39;/Users/olgabotvinnik/Library/Fonts/Inconsolata-dz.otf&#3
 
 
 <p>Looks like Inconsolata&#8217;s there, so let&#8217;s try it out! To change your default font on the fly, add this to your&nbsp;code:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="kn">as</span> <span class="nn">mpl</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">&#39;font.fixed-width&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;Inconsolata-dz&#39;</span>
-<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;fixed-width&#39;</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="kn">as</span> <span class="nn">mpl</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.fixed-width&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Inconsolata-dz&#39;</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;fixed-width&#39;</span>
 </pre></div>
 
 
@@ -190,24 +190,24 @@ aS<span class="s1">&#39;/Users/olgabotvinnik/Library/Fonts/Inconsolata-dz.otf&#3
 <p>Say you&#8217;re a huge fan of the sans-serif font <a href="http://www.typography.com/fonts/font_overview.php?productLineID=100008">Gotham</a> and want to use it for your plots. It&#8217;s a proprietary font and will probably not appear as a <code>.ttf</code> file. Follow the same steps 1-6, but find the location of your font using FontBook.app. Search for your font, and then either hit Command-R or click File &#8212;&gt; Show in Finder. Then drag that file into Terminal and you&#8217;ll get the full path name. I use this Finder-Terminal drag and drop trick all the&nbsp;time!</p>
 <h3>To edit your final <code>.pdf</code> files in another program such as&nbsp;Illustrator</h3>
 <p>After producing your matplotlib figures, you may still want to tweak the axis or typography. To be able to do that, edit your <code>~/.matplotlibrc</code> file&nbsp;from:</p>
-<div class="highlight"><pre>pdf.fonttype = 3
+<div class="highlight"><pre><span></span>pdf.fonttype = 3
 </pre></div>
 
 
 <p>To:</p>
-<div class="highlight"><pre>pdf.fonttype = 42
+<div class="highlight"><pre><span></span>pdf.fonttype = 42
 </pre></div>
 
 
 <p>And that&#8217;ll do it! Hat tip to Benjamin&nbsp;Reedlunn!</p>
 <h2>Appendix</h2>
 <p>The code and data used to create these files can be found <a href="https://github.com/olgabot/coding-cucumber/tree/master/helvetica_disordered_protein">here</a>. To create the file, run the&nbsp;command:</p>
-<div class="highlight"><pre>python pondrfit_plots.py -f *.pondrfit -t &#39;Oct4 isoform 2&#39; -c &#39;#0080FF&#39; -s
+<div class="highlight"><pre><span></span>python pondrfit_plots.py -f *.pondrfit -t &#39;Oct4 isoform 2&#39; -c &#39;#0080FF&#39; -s
 </pre></div>
 
 
 <p>One of the hardest parts of this code was figuring out how to extract the start and end of the disordered regions (disorder score&gt;0.5) when all I had was a sequential list of indices for each region. Turns out the trick is using both <code>itertools</code> and <code>operator</code>:</p>
-<div class="highlight"><pre>ranges = []
+<div class="highlight"><pre><span></span>ranges = []
 for k, g in groupby(enumerate(df_disordered.index), lambda (i,x):i-x):
     inds = map(itemgetter(1), g)
     ranges.append([inds[0], inds[-1]])

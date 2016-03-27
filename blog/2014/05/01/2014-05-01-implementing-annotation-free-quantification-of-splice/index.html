@@ -79,7 +79,7 @@
 <p>Sigh.</p>
 <p>So I&#8217;d much rather use something that quantifies splicing of all junctions, arbitrarily. But when I tried using <code>sjcount</code> I couldn&#8217;t figure out what one of the outputs was (like what&#8217;s the difference between a &#8220;splice junction&#8221; and a &#8220;splice boundary?&#8221;). Plus I realized that the &#8220;splice junction counts&#8221; (<code>*.ssj</code>) file was really similar to the &#8220;<code>SJ.out.tab</code>&#8221; file created by the <a href="https://code.google.com/p/rna-star/"><span class="caps">RNA</span>-<span class="caps">STAR</span></a>&nbsp;aligner.</p>
 <p><code>.ssj</code> files look like (I added the column&nbsp;names):</p>
-<div class="highlight"><pre>chrom   start   stop    strand  overhang    count
+<div class="highlight"><pre><span></span>chrom   start   stop    strand  overhang    count
 chr1    146509  155767  .       20      1
 chr1    146509  155767  .       34      1
 chr1    146509  155767  .       49      3
@@ -99,7 +99,7 @@ chr1    894461  894595  .       9       5
 
 <p>The start/stop are off by one here because <code>.ssj</code><span class="quo">&#8216;</span>s index is from the exon end/exon start, and this is from the intron start/intron end. So the <span class="caps">SJ</span>.out.tab coordinates are (start from <code>.ssj</code>+1) and (end from <code>.ssj</code>-1).</p>
 <p><span class="caps">FYI</span>, the <code>.ssc</code> files looked&nbsp;like:</p>
-<div class="highlight"><pre>chr1    894595  894595  .       8       1
+<div class="highlight"><pre><span></span>chr1    894595  894595  .       8       1
 chr1    1228468 1228468 .       1       1
 chr1    1228468 1228468 .       3       3
 chr1    1228468 1228468 .       5       1
@@ -113,7 +113,7 @@ chr1    1228468 1228468 .       27      1
 
 
 <p>This claims to have the same columns as <code>.ssj</code> files except instead of start/stop it&#8217;s position/position. I was very confused by how you can have a count at a position. Why does <code>chr1:894595</code> have one line while <code>chr1:1228468</code> have a bunch? If you search for <code>894595</code> in the <code>.ssj</code> file, you&nbsp;get:</p>
-<div class="highlight"><pre>chr1    894461  894595  .       7       2
+<div class="highlight"><pre><span></span>chr1    894461  894595  .       7       2
 chr1    894461  894595  .       9       5
 chr1    894461  894595  .       10      2
 chr1    894461  894595  .       11      1
@@ -136,7 +136,7 @@ chr1    894461  894595  .       49      14
 <p><img alt="" src="http://bioinformatics.oxfordjournals.org/content/29/2/273/embed/graphic-3.gif" /></p>
 <p>Where the summation is over all other possible acceptors (in the case of <em>A&#8217;</em>) or all other possible donors (in the case of <em>D&#8217;</em>).</p>
 <p>So using the <span class="caps">SJ</span>.out.tab files from <span class="caps">RNA</span>-<span class="caps">STAR</span> and the magic of <a href="http://pandas.pydata.org/"><code>pandas</code></a>, and a <a href="https://github.com/olgabot/sj2psi/blob/master/sj2psi/__init__.py#L64">bit of filtering</a>, you can calculate these scores very&nbsp;easily:</p>
-<div class="highlight"><pre>sj[&#39;psi5&#39;] = sj.groupby([&#39;chrom&#39;, 
+<div class="highlight"><pre><span></span>sj[&#39;psi5&#39;] = sj.groupby([&#39;chrom&#39;, 
     &#39;first_bp_intron&#39;])[&#39;total_filtered_reads&#39;].transform(lambda x: x/x.sum())
 </pre></div>
 

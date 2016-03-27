@@ -182,7 +182,7 @@ argument, such as <code>rep(c("red", "blue"), 30)</code>, to get a vector of alt
 strings, &#8220;red&#8221; and &#8220;blue.&#8221; We could have also made the same vector
 with <code>classification = vector(length=200, mode="numeric")</code>, which initializes
 the numeric values at 0, but I decided to do it with <code>rep</code> instead.</p>
-<div class="highlight"><pre><span class="n">classification</span> = <span class="n">rep</span>(<span class="mi">0</span>,<span class="mi">200</span>)
+<div class="highlight"><pre><span></span><span class="n">classification</span> = <span class="n">rep</span>(<span class="mi">0</span>,<span class="mi">200</span>)
 </pre></div>
 
 
@@ -194,7 +194,7 @@ and part of the semi-randomness is starting with a seed number, and then doing
 all kinds of transformations to then get a &#8220;random&#8221; number. So if we make sure
 we are always using the same seed, then we will always get the same set of
 &#8220;random&#8221;&nbsp;numbers.</p>
-<div class="highlight"><pre>set.seed(100)
+<div class="highlight"><pre><span></span>set.seed(100)
 </pre></div>
 
 
@@ -220,7 +220,7 @@ variables without seeing everything at once. It can be handy. Another method is
 be annoying if you have a matrix with a large number of columns, say over 100. Then
 you get the first 10 values for all 100 columns, which takes up a lot of space. <code>str</code>
 can be more convenient in that&nbsp;case.</p>
-<div class="highlight"><pre>&gt; str(125/125:1)
+<div class="highlight"><pre><span></span>&gt; str(125/125:1)
  num [1:125] 1 1.01 1.02 1.02 1.03 ...
 </pre></div>
 
@@ -228,7 +228,7 @@ can be more convenient in that&nbsp;case.</p>
 <p>Randomly generated values in the uniform distribution:
 (Notice that I re-set the random number seed. This is because after
 a random seed is used, the random number generator advances to the next&nbsp;seed.)</p>
-<div class="highlight"><pre>&gt; set.seed(100); str(runif(125))
+<div class="highlight"><pre><span></span>&gt; set.seed(100); str(runif(125))
  num [1:125] 0.3078 0.2577 0.5523 0.0564 0.4685 ...
 </pre></div>
 
@@ -237,21 +237,21 @@ a random seed is used, the random number generator advances to the next&nbsp;see
 (For those Linear Algebra lovers out there, we don&#8217;t get a matrix because by 
 default, R multiplies vectors on an element-by-element basis. If you want
 the usual vector product, aka the cross product, do <code>vector1 %*% vector2</code>)</p>
-<div class="highlight"><pre>&gt; set.seed(100); str(runif(125)*(125/125:1))
+<div class="highlight"><pre><span></span>&gt; set.seed(100); str(runif(125)*(125/125:1))
  num [1:125] 0.3078 0.2598 0.5613 0.0578 0.484 ...
 </pre></div>
 
 
 <p>Now we can use <code>ifelse</code> to assign a 0 or 1 based on whether the vector we just
 created is greater than 0.6 or&nbsp;not.</p>
-<div class="highlight"><pre>set.seed(100); classification[76:200] = ifelse(runif(125)*(125/125:1) &gt; 0.6, 1, 0)
+<div class="highlight"><pre><span></span>set.seed(100); classification[76:200] = ifelse(runif(125)*(125/125:1) &gt; 0.6, 1, 0)
 </pre></div>
 
 
 <h2>The final binary&nbsp;vector</h2>
 <p>This is what I get for the binary classification vector. Keep in mind that we only 
 added 1&#8217;s to the last 125 values, or from index 76 and&nbsp;up.</p>
-<div class="highlight"><pre>&gt; classification
+<div class="highlight"><pre><span></span>&gt; classification
   [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  [38] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
  [75] 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 1 1 0 0 0 1 1 1 1 1 0 0 1 1 1 0 1 1 0 1 1 1
@@ -268,18 +268,18 @@ numbers, and multiplied a uniform distribution by a linear function. Now this is
 quite enough to make most of the 1&#8217;s be in the upper numbers and most of the 0&#8217;s
 be in the lower numbers, so we add a linearly increasing amount of Gaussian noise
 to the&nbsp;values.</p>
-<div class="highlight"><pre>set.seed(101); continuous = runif(200)*1:200+rnorm(200,mean=50,sd=5)*1:200
+<div class="highlight"><pre><span></span>set.seed(101); continuous = runif(200)*1:200+rnorm(200,mean=50,sd=5)*1:200
 </pre></div>
 
 
 <p>My continuous vector looks like&nbsp;this:</p>
-<div class="highlight"><pre>&gt; str(continuous)
+<div class="highlight"><pre><span></span>&gt; str(continuous)
  num [1:200] 51.7 94.2 184.1 226.1 269.9 ...
 </pre></div>
 
 
 <p>As you can see, we have values larger than 200, but we assumed there are 200 pieces of <em>Star Trek: <span class="caps">TNG</span></em> video media to watch, so we need to normalize it by the max. Now our maximum value is 1, so we multiply by 200 to get a maximum value of&nbsp;200.</p>
-<div class="highlight"><pre>&gt; continuous = continuous/max(continuous) * 200
+<div class="highlight"><pre><span></span>&gt; continuous = continuous/max(continuous) * 200
 </pre></div>
 
 
@@ -289,7 +289,7 @@ the 0&#8217;s occur in the lower end of the continuous spectrum, and the 1&#8217
 higher end of the continuous&nbsp;spectrum.</p>
 <!-- fix data because continuous goes up to 10,000 -->
 
-<div class="highlight"><pre>png(&quot;~/workspace/tutorials/logistic_regression_points.png&quot;)
+<div class="highlight"><pre><span></span>png(&quot;~/workspace/tutorials/logistic_regression_points.png&quot;)
 plot(continuous, classification, pch=20, col=&quot;blue&quot;)
 dev.off()
 </pre></div>
@@ -299,11 +299,11 @@ dev.off()
 <p>So according to our data, there&#8217;s a lot of people who have seen <em>most</em> of <em>Star Trek:<span class="caps">TNG</span></em> and have been to a convention, but there are a few individuals who have seen most of it and yet have not been a&nbsp;convention.</p>
 <h1>Step 3: Do logistic&nbsp;regression!</h1>
 <p>Now you can use generalized linear models to fit to the data. Note: This is one of many methods in R to do logistic regression, and I chose to do the simplest version. Note that <code>classification ~ continuous</code> is shorthand for <code>y ~ x</code>, or as the R people say, <code>response ~ terms</code>. If you had more data points, like Klingon language profiency, you would add this variable by using the <code>cbind</code> or &#8220;column bind&#8221; function which would create a 2-column matrix from the two vectors: <code>glm(classification ~ cbind(continuous, klingon), ...)</code>.</p>
-<div class="highlight"><pre><span class="nx">glm</span><span class="p">.</span><span class="nx">out</span> <span class="o">=</span> <span class="nx">glm</span><span class="p">(</span><span class="nx">classification</span> <span class="o">~</span> <span class="nx">continuous</span><span class="p">,</span> <span class="nx">family</span><span class="o">=</span><span class="nx">binomial</span><span class="p">(</span><span class="nx">logit</span><span class="p">))</span>
-<span class="nx">png</span><span class="p">(</span><span class="s2">&quot;~/workspace/tutorials/logistic_fitted.png&quot;</span><span class="p">)</span>
-<span class="nx">plot</span><span class="p">(</span><span class="nx">continuous</span><span class="p">,</span> <span class="nx">glm</span><span class="p">.</span><span class="nx">out$fitted</span><span class="p">,</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="nx">col</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="nx">lwd</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nx">main</span><span class="o">=</span><span class="s2">&quot;Logistic function fitted to classification data\nvia a generalized linear model&quot;</span><span class="p">)</span>
-<span class="nx">points</span><span class="p">(</span><span class="nx">continuous</span><span class="p">,</span> <span class="nx">classification</span><span class="p">,</span> <span class="nx">col</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="nx">pch</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="nx">dev</span><span class="p">.</span><span class="nx">off</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><span class="x">glm.out = glm(classification ~ continuous, family=binomial(logit))</span>
+<span class="x">png(&quot;~/workspace/tutorials/logistic_fitted.png&quot;)</span>
+<span class="x">plot(continuous, glm.out</span><span class="p">$</span><span class="nv">fitted</span><span class="x">, type=&quot;l&quot;, col=&quot;red&quot;, lwd=1, main=&quot;Logistic function fitted to classification data\nvia a generalized linear model&quot;)</span>
+<span class="x">points(continuous, classification, col=&quot;blue&quot;, pch=20)</span>
+<span class="x">dev.off()</span>
 </pre></div>
 
 
