@@ -53,6 +53,15 @@
 Posts by 'Olga Botvinnik'                </h1>
                     <section class="post">
                         <header class="post-header">
+                            <h3><a class="post-title" href="../blog/2016/12/14/time-is-citations/">Time is Citations: How I Plan My&nbsp;Days</a></h3>
+                            <p class="post-meta"><p>In business, time is money. But in academia, the currency is not published units but citations of your publications. For someone to not only read your paper but understand and cite it, you need to produce high-quality, readable papers. And that requires deep&nbsp;work.</p></p>
+                            <p class="post-meta">
+                                in <a href="../category/productivity.html">productivity</a> &middot; Wed 14 December 2016
+                            </p>
+                        </header>
+                    </section>
+                    <section class="post">
+                        <header class="post-header">
                             <h3><a class="post-title" href="../blog/2015/05/06/igv-java-lang-nullpointerexception/"><span class="caps">IGV</span>: Null pointer exceptions, invalid <span class="caps">GZIP</span> header, invalid <span class="caps">BZIP</span>&nbsp;header</a></h3>
                             <p class="post-meta"><p>If you&#8217;ve run into a <code>java.lang.NullPointerException</code> or &#8220;Invalid Gzip Header&#8221; or some complaint about bzip while using the Integrative Genomics Viewer, then you&#8217;ve run into the same problem as me. Turns out I had too many index (<code>*.bai</code>) files that had similar naming to my <code>*.bam</code> files, and <span class="caps">IGV</span> assigned the wrong ones as the index, so whenever I tried to view reads from those samples, the index pointed to the wrong location in the bam, and one of those many errors would happen. So the solution is simple (and relatively fast): use <code>samtools index</code> on your bam&nbsp;files!</p></p>
                             <p class="post-meta">

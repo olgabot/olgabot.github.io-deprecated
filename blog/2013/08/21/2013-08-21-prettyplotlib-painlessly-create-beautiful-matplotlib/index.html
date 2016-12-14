@@ -97,7 +97,7 @@ that if you just do a <code>scatter</code> plot, then it doesn&#8217;t cycle at 
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_default.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_default.png"></p>
 <h2>Before <code>prettyplotlib</code>: how to make nice&nbsp;plots</h2>
 <p>Now I&#8217;m going to take you through <span class="caps">ALL</span> the steps I used to take to make nice
 looking&nbsp;plots.</p>
@@ -133,7 +133,7 @@ ax.scatter(x, y, label=str(i), facecolor=color)
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 01: changed colors" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_01_changed_colors.png" /></p>
+<p><img alt="Matplotlib scatter improved 01: changed colors" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_01_changed_colors.png"></p>
 <p>This looks nice, almost like an impressionist painting, but it&#8217;s still hard to
 see overlaps here. So let&#8217;s fill the symbols with <code>0.5</code> opacity using
 <code>alpha=0.5</code>.</p>
@@ -164,7 +164,7 @@ see overlaps here. So let&#8217;s fill the symbols with <code>0.5</code> opacity
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 02: added alpha" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_02_added_alpha.png" /></p>
+<p><img alt="Matplotlib scatter improved 02: added alpha" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_02_added_alpha.png"></p>
 <p>This is still pretty lovely and impressionist-y but I still didn&#8217;t like that it
 was hard to see when the dots overlapped. So let&#8217;s add a black outline, and
 specify that <code>color</code> is just the <code>facecolor</code>:</p>
@@ -196,7 +196,7 @@ facecolor=color)
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 03: added black outline" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_03_added_outline.png" /></p>
+<p><img alt="Matplotlib scatter improved 03: added black outline" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_03_added_outline.png"></p>
 <p>Ack, but those lines are too thick &#8230; let&#8217;s think them down to <code>linewidth=0.15</code></p>
 <div class="highlight"><pre><span></span>ax.scatter(x, y, label=str(i), alpha=0.5, edgecolor=&#39;black&#39;,
 facecolor=color, linewidth=0.15)
@@ -225,7 +225,7 @@ facecolor=color, linewidth=0.15)
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 04: thinned out black outline" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_04_thinned_outline.png" /></p>
+<p><img alt="Matplotlib scatter improved 04: thinned out black outline" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_04_thinned_outline.png"></p>
 <p><em>Now</em> we&#8217;re getting somewhere. This looks very lovely. Don&#8217;t you want to just
 cuddle up with that cute&nbsp;plot?</p>
 <p>What are those top and right axes lines really doing for us? They&#8217;re boxing the
@@ -265,7 +265,7 @@ ax.spines[spine].set_visible(False)
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 05: removed top and right axis lines" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_05_removed_top_right_spines.png" /></p>
+<p><img alt="Matplotlib scatter improved 05: removed top and right axis lines" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_05_removed_top_right_spines.png"></p>
 <p>Oops, but we still have the ticks on the top and right axes. We&#8217;ll need to get
 rid of them. Actually, why don&#8217;t we just get rid of all ticks altogether? We can
 tell by the position of the number where it indicates, so we don&#8217;t need an
@@ -309,7 +309,7 @@ ax.yaxis.set_ticks_position(&#39;none&#39;)
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 06: removed tick marks" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_06_removed_ticks.png" /></p>
+<p><img alt="Matplotlib scatter improved 06: removed tick marks" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_06_removed_ticks.png"></p>
 <p>Ahh, much better. But we won&#8217;t stop there. Now we&#8217;ll tweak the remaining pieces
 of the figure. For the rest of the spines, let&#8217;s thin the line down to <code>0.5</code>
 points instead of the default <code>1.0</code> points. Also, we&#8217;ll change it from pure
@@ -323,7 +323,7 @@ fig.savefig(&#39;black_vs_almost_black.png&#39;)
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 06: removed tick marks" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/black_vs_almost_black.png" /></p>
+<p><img alt="Matplotlib scatter improved 06: removed tick marks" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/black_vs_almost_black.png"></p>
 <p>So not a <em>huge</em> difference, and the dark grey still looks pretty black, but it&#8217;s
 <a href="http://ianstormtaylor.com/design-tip-never-use-black/">a little more pleasant on the eyes</a> to use a dark grey instead of black. There&#8217;s very few things in
 nature that are truly black. Just look at shadows! They&#8217;re just dark grey, or
@@ -383,7 +383,7 @@ for spine in spines_to_keep:
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 07: changed axis lines from black to almost black" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_07_axis_black_to_almost_black.png" /></p>
+<p><img alt="Matplotlib scatter improved 07: changed axis lines from black to almost black" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_07_axis_black_to_almost_black.png"></p>
 <p>This is nice. But if you look closely, the tick labels are still black :(  We
 have to change them separately,&nbsp;using</p>
 <div class="highlight"><pre><span></span># Change the labels to the off-black
@@ -450,7 +450,7 @@ ax.set_title(&#39;prettyplotlib `scatter` example\nshowing improved matplotlib `
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 08: changed labels to almost black" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_08_labels_black_to_almost_black.png" /></p>
+<p><img alt="Matplotlib scatter improved 08: changed labels to almost black" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_08_labels_black_to_almost_black.png"></p>
 <p>If you remember in the original example, we also had an axis legend,&nbsp;using</p>
 <div class="highlight"><pre><span></span>ax.legend()
 </pre></div>
@@ -509,7 +509,7 @@ ax.set_title(&#39;prettyplotlib `scatter` example\nshowing improved matplotlib `
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 09: added ugly legend" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_09_ugly_legend.png" /></p>
+<p><img alt="Matplotlib scatter improved 09: added ugly legend" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_09_ugly_legend.png"></p>
 <p>There are many things I don&#8217;t like about this&nbsp;legend.</p>
 <ol>
 <li>First of all, why does it have such a thick border line? What does that
@@ -604,7 +604,7 @@ for t in texts:
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 10: beautiful legend" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_10_pretty_legend.png" /></p>
+<p><img alt="Matplotlib scatter improved 10: beautiful legend" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_matplotlib_improved_10_pretty_legend.png"></p>
 <p>Aaaaaaaaaaand I got tired of doing all those steps, <span class="caps">EVERY</span> time I wanted to make a simple scatterplot. So I wrote
 <a href="http://github.com/olgabot/prettyplotlib"><code>prettyplotlib</code></a>. Here&#8217;s an
 illustrative example of how awesome <code>prettyplotlib</code> is, and how it will save
@@ -630,7 +630,7 @@ all the time you spent agonizing over making your <code>matplotlib</code> plots&
 </pre></div>
 
 
-<p><img alt="Matplotlib scatter improved 10: beautiful legend" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_prettyplotlib_default.png" /></p>
+<p><img alt="Matplotlib scatter improved 10: beautiful legend" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_prettyplotlib_default.png"></p>
 <p>The only commands that were different from the very first example with
 matplotlib&nbsp;are:</p>
 <div class="highlight"><pre><span></span>ppl.scatter(ax, x, y, label=str(i), facecolor=&#39;none&#39;)
@@ -702,7 +702,7 @@ prettyplotlib, you can&nbsp;do:</p>
 </pre></div>
 
 
-<p><img alt="Prettyplotlib back to matplotlib" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_prettyplotlib_back_to_matplotlib_default.png" /></p>
+<p><img alt="Prettyplotlib back to matplotlib" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/scatter_prettyplotlib_back_to_matplotlib_default.png"></p>
 <p>Notice that the default calls of <code>ax.scatter</code> and <code>ax.legend</code> do the usual
 thing. This is important, because for <code>prettyplotlib</code> to work, you&#8217;ll need to
 use a syntax that&#8217;s different from the usual <code>matplotlib</code> one:  <code>ppl.scatter(ax,
@@ -729,7 +729,7 @@ its default colors from <span class="caps">MATLAB</span>, and there the default 
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_default.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_default.png"></p>
 <p>Using the same zero-centered randomly distributed gaussian distribution, we can
 plot it using <code>prettyplotlib</code> with a few modifications in&nbsp;syntax:</p>
 <div class="highlight"><pre><span></span>ppl.pcolormesh(fig, ax, np.random.randn(10,10))
@@ -751,7 +751,7 @@ gradations of red and blue, so it&#8217;s easier to tell the difference between&
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_default.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_default.png"></p>
 <p>You may have also noticed similar changes as were made in <code>prettyplotlib.scatter</code>,
 where axis lines were removed, and blacks were changed to almost&nbsp;black.</p>
 <h3>Only positive (or negative)&nbsp;values</h3>
@@ -771,7 +771,7 @@ different (0 to 1 instead of -2 to&nbsp;+2)</p>
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_positive_default.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_positive_default.png"></p>
 <p>If your data is only positive or negative, then <code>prettyplotlib</code> will auto-detect
 this and use a single-color colormap. The default for positive data is the
 <code>reds</code> colormap.</p>
@@ -787,7 +787,7 @@ this and use a single-color colormap. The default for positive data is the
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_positive.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_positive.png"></p>
 <p>And the default for negative data is the <code>blues</code> colormap.</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">prettyplotlib</span> <span class="kn">as</span> <span class="nn">ppl</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -801,7 +801,7 @@ this and use a single-color colormap. The default for positive data is the
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_negative.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_negative.png"></p>
 <h2>Add x or y tick&nbsp;labels</h2>
 <p>Plus you can add x- and y-ticklabels&nbsp;directly!</p>
 <p>Normally, when you add x- and y-ticklabels on <code>pcolormesh</code> in <code>matplotlib</code>,
@@ -852,7 +852,7 @@ ax.set_yticklabels(yticklabels)
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_positive_labels.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_matplotlib_positive_labels.png"></p>
 <p>But <code>prettyplotlib.pcolormesh</code> assumes that you want the <code>xticklabels</code> and
 <code>yticklabels</code> on each block, and makes it easy to&nbsp;specify.</p>
 <div class="highlight"><pre><span></span>ppl.pcolormesh(fig, ax, np.random.uniform(size=(10,10)),
@@ -877,7 +877,7 @@ ax.set_yticklabels(yticklabels)
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_labels.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_labels.png"></p>
 <h3>Custom&nbsp;colormaps</h3>
 <p>Or pick your own colormap! The diverging colormap <code>PRGn</code> or Purple and Green is
 pretty nice. I usually use this website to look up the colormaps: <a href="http://bl.ocks.org/mbostock/5577023">Every
@@ -901,7 +901,7 @@ Colorbrewer Scale</a> (hover over the colors to get the name of the&nbsp;colorma
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_labels_other_cmap_diverging.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_labels_other_cmap_diverging.png"></p>
 <p>Or if you want your own colormap for positive-only&nbsp;data:</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">prettyplotlib</span> <span class="kn">as</span> <span class="nn">ppl</span>
 <span class="kn">import</span> <span class="nn">brewer2mpl</span>
@@ -922,7 +922,7 @@ Colorbrewer Scale</a> (hover over the colors to get the name of the&nbsp;colorma
 </pre></div>
 
 
-<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_labels_other_cmap_sequential.png" /></p>
+<p><img alt="Matplotlib default scatterplot" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_labels_other_cmap_sequential.png"></p>
 <h3>Log normalization or other&nbsp;parameters</h3>
 <p>Plus, this will take the usual parameters of <code>pcolormesh</code> like if you want to
 rescale your data to&nbsp;log-scale:</p>
@@ -955,7 +955,7 @@ rescale your data to&nbsp;log-scale:</p>
 </pre></div>
 
 
-<p><img alt="Log-normalized heatmap" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_labels_lognorm.png" /></p>
+<p><img alt="Log-normalized heatmap" src="https://raw.github.com/olgabot/prettyplotlib/master/ipython_notebooks/pcolormesh_prettyplotlib_labels_lognorm.png"></p>
 <p>And now you can easily make beautiful&nbsp;heatmaps!</p>
 <h2>That&#8217;s all,&nbsp;folks!</h2>
 <p>That&#8217;s my introduction to <code>prettyplotlib</code> and why you need it. There are similar

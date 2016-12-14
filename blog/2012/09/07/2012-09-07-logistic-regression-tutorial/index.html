@@ -79,7 +79,7 @@ as accessible as possible for those with less programming&nbsp;experience.</p>
 <h1>What in Merlin&#8217;s beard is <em>logistic&nbsp;regression?</em></h1>
 <h2>First, what is <em>regression</em>?</h2>
 <p>You may have heard of &#8220;linear regression,&#8221; which fits a $y=mx+b$ line to a set of points, such as in the figure below. I&#8217;m not going to go into the details of linear regression, but you can <a href="http://www.stat.yale.edu/Courses/1997-98/101/linreg.htm">read about it</a> if you&nbsp;like.</p>
-<p><img alt="Linear regression matches a best-fitting line to a set of data." src="http://media.tumblr.com/tumblr_mdorakn4cw1rw6gvj.png" /></p>
+<p><img alt="Linear regression matches a best-fitting line to a set of data." src="http://media.tumblr.com/tumblr_mdorakn4cw1rw6gvj.png"></p>
 <!-- Add description of Logit function -->
 
 <p>Logistic regression is similar, but instead of having two continuous variables as above, one of the variables is binary (0 or 1) and the other is continuous. But we&#8217;re not fitting a line, we&#8217;re fitting a <em>logit</em>, which is a totally different function that estimates probability for a continuous variable rather than assigns classification. For example, we could predict the probability
@@ -134,7 +134,7 @@ than 1 is negative, approaching negative infinity as the number gets closer and
 closer to 0. The natural log of anything larger than 1 is positive, and approaches 
 positive infinity as the number gets larger and larger, but slower than we approach 
 negative infinity from the other&nbsp;side. </p>
-<p><img alt="Natural log function" src="http://media.tumblr.com/tumblr_mdorb7uHwT1rw6gvj.png" /></p>
+<p><img alt="Natural log function" src="http://media.tumblr.com/tumblr_mdorb7uHwT1rw6gvj.png"></p>
 <p>This symmetry is helpful to guide our intuition about events occurring or not&nbsp;occuring.</p>
 <p><em><span class="caps">FYI</span>:</em> We used the natural logarithm here because that&#8217;s the standard. You could
 really use any log base you like, even $\log_\pi$ would do, but it&#8217;s just not
@@ -165,7 +165,7 @@ p + p(e^{-(a_0 + a_1x_1 + a_2x_2, \ldots , a_nx_n)}) &amp;= 1 \newline
 <p>$$
 p = \frac{e^{(a_0 + a_1x_1 + a_2x_2, \ldots , a_nx_n)}}{1+e^{(a_0 + a_1x_1 + a_2x_2, \ldots , a_nx_n)}}.&nbsp;$$</p>
 <p>If we set $a_1 = 1$ and all other $a_0, a_2, a_3, \ldots = 0$, then we get the general logit cuve&nbsp;below</p>
-<p><img alt="The logit curve ranges from negative infinity to positive infinity on the x-axis, and from 0 to 1 on the y-axis." src="http://media.tumblr.com/tumblr_mdorbq7Ixx1rw6gvj.png" /></p>
+<p><img alt="The logit curve ranges from negative infinity to positive infinity on the x-axis, and from 0 to 1 on the y-axis." src="http://media.tumblr.com/tumblr_mdorbq7Ixx1rw6gvj.png"></p>
 <p>So now we have a way of creating a predictor of the probability of a binary variable from a continuous variable. Now let&#8217;s get started with doing&nbsp;regression.</p>
 <p><em><span class="caps">PS</span>, if you want to get math typesetting (aka LaTeX) on your blog, I recommend 
 <strong>against</strong> searching for &#8220;tumblr latex&#8221; and instead checking out <a href="http://checkmyworking.com/2012/01/how-to-get-beautifully-typeset-maths-on-your-blog/">this tutorial</a> on installing MathJax on your blog, tumblr or&nbsp;not.</em></p>
@@ -295,7 +295,7 @@ dev.off()
 </pre></div>
 
 
-<p><img alt="The continuous vector on the x-axis vs the binary vector in the y-axis. Notice that most of the values classified as 0 appear with lower continuous values, and the values classified as 1 appear with higher continuous values." src="http://media.tumblr.com/tumblr_mdorcfiIYs1rw6gvj.png" /></p>
+<p><img alt="The continuous vector on the x-axis vs the binary vector in the y-axis. Notice that most of the values classified as 0 appear with lower continuous values, and the values classified as 1 appear with higher continuous values." src="http://media.tumblr.com/tumblr_mdorcfiIYs1rw6gvj.png"></p>
 <p>So according to our data, there&#8217;s a lot of people who have seen <em>most</em> of <em>Star Trek:<span class="caps">TNG</span></em> and have been to a convention, but there are a few individuals who have seen most of it and yet have not been a&nbsp;convention.</p>
 <h1>Step 3: Do logistic&nbsp;regression!</h1>
 <p>Now you can use generalized linear models to fit to the data. Note: This is one of many methods in R to do logistic regression, and I chose to do the simplest version. Note that <code>classification ~ continuous</code> is shorthand for <code>y ~ x</code>, or as the R people say, <code>response ~ terms</code>. If you had more data points, like Klingon language profiency, you would add this variable by using the <code>cbind</code> or &#8220;column bind&#8221; function which would create a 2-column matrix from the two vectors: <code>glm(classification ~ cbind(continuous, klingon), ...)</code>.</p>
@@ -308,7 +308,7 @@ dev.off()
 
 
 <p>The plot of the fitted curve looks&nbsp;like:</p>
-<p><img alt="Logistic curve fitted to data." src="http://media.tumblr.com/tumblr_mdorcxMktg1rw6gvj.png" /></p>
+<p><img alt="Logistic curve fitted to data." src="http://media.tumblr.com/tumblr_mdorcxMktg1rw6gvj.png"></p>
 <h2>So what actually happened&nbsp;here?</h2>
 <p>The <code>glm</code> function found the values of $a_0$ and $a_1$ that minimize the error term. I&#8217;m not qualified to describe <code>glm</code> in gory detail, or all the other possible methods of calculating logistic regression, but <a href="http://www.omidrouhani.com/research/logisticregression/html/logisticregression.htm#_Toc147483467">this site</a> gives the mathematics the justice it deserves. You will need to be familiar with linear algebra to fully understand the&nbsp;arguments.</p>
 <h1><span class="caps">FAQ</span></h1>

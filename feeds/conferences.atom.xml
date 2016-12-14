@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Science, meet productivity</title><link href="/" rel="alternate"></link><link href="/feeds/conferences.atom.xml" rel="self"></link><id>/</id><updated>2015-04-22T22:21:00-07:00</updated><entry><title>CodeNeuro NYC 2015</title><link href="/blog/2015/04/12/codeneuro-nyc-2015/" rel="alternate"></link><updated>2015-04-22T22:21:00-07:00</updated><author><name>Olga Botvinnik</name></author><id>tag:,2015-04-12:blog/2015/04/12/codeneuro-nyc-2015/</id><summary type="html">&lt;p&gt;Last weekend I attended the &lt;a href="http://codeneuro.org/2015/NYC/"&gt;CodeNeuro &lt;span class="caps"&gt;NYC&lt;/span&gt;&lt;/a&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Science, meet productivity - conferences</title><link href="/" rel="alternate"></link><link href="/feeds/conferences.atom.xml" rel="self"></link><id>/</id><updated>2015-04-22T22:21:00-07:00</updated><entry><title>CodeNeuro NYC 2015</title><link href="/blog/2015/04/12/codeneuro-nyc-2015/" rel="alternate"></link><published>2015-04-12T22:21:00-07:00</published><updated>2015-04-22T22:21:00-07:00</updated><author><name>Olga Botvinnik</name></author><id>tag:None,2015-04-12:/blog/2015/04/12/codeneuro-nyc-2015/</id><summary type="html">&lt;p&gt;Last weekend I attended the &lt;a href="http://codeneuro.org/2015/NYC/"&gt;CodeNeuro &lt;span class="caps"&gt;NYC&lt;/span&gt;&lt;/a&gt; conference, which is a conference for neuroscientists, programmers, and everything in between. It was a unique experience because it had both the excitement and energy of a tech conference, and the pure, unadulterated zest for knowledge of a scientific&amp;nbsp;conference.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last weekend I attended the &lt;a href="http://codeneuro.org/2015/NYC/"&gt;CodeNeuro &lt;span class="caps"&gt;NYC&lt;/span&gt;&lt;/a&gt;
 conference, which is a conference for neuroscientists, programmers, and
 everything in between. It was a unique experience because it had both the
 excitement and energy of a tech conference, and the pure, unadulterated zest
@@ -218,7 +218,7 @@ fixtures from existing&amp;nbsp;ones.&lt;/p&gt;
 &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
 &lt;p&gt;Afterwards, we all hung out at a nice&amp;nbsp;dinner:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="CodeNeuro after-dinner party" src="http://i.imgur.com/KY9smQR.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="CodeNeuro after-dinner party" src="http://i.imgur.com/KY9smQR.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;Acknowledgements&lt;/h2&gt;
 &lt;p&gt;Finally, I want to acknowledge all the organizers of the&amp;nbsp;event:&lt;/p&gt;
 &lt;ul&gt;
@@ -229,4 +229,4 @@ fixtures from existing&amp;nbsp;ones.&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://web.stanford.edu/~logang/"&gt;Logan&amp;nbsp;Grosenick&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/dgangul1"&gt;Deep&amp;nbsp;Ganguli&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/hackingdata"&gt;Jeff&amp;nbsp;Hammerbacher&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="programming"></category><category term="conferences"></category><category term="bioinformatics"></category><category term="neuroscience"></category></entry></feed>
+&lt;/ul&gt;</content><category term="programming"></category><category term="conferences"></category><category term="bioinformatics"></category><category term="neuroscience"></category></entry></feed>
